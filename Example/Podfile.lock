@@ -1,0 +1,16 @@
+PODS:
+  - QSKitLibrary (0.1.0)
+
+DEPENDENCIES:
+  - QSKitLibrary (from `../`)
+
+EXTERNAL SOURCES:
+  QSKitLibrary:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  QSKitLibrary: 3300648e02cfe6d154b5dff24fbdd16e7e804181
+
+PODFILE CHECKSUM: dcb80a18928d0f3d3d8586b462275e9b55cfb1a0
+
+COCOAPODS: 1.11.2

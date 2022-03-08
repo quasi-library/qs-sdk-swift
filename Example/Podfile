@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '9.0'
+
+target 'QSKitLibrary_Example' do
+  pod 'QSKitLibrary', :path => '../'
+
+  target 'QSKitLibrary_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
