@@ -25,5 +25,10 @@ class ViewController: UIViewController {
         self.navigationController?.show(vc, sender: nil)
     }
     
+    @IBAction func pushToDoubleSlider(_ sender: Any) {
+        let vc = QSDoubleSliderDemoController()
+        self.navigationController?.show(vc, sender: nil)
+    }
+
 }
 
