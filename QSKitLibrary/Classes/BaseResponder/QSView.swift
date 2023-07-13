@@ -8,14 +8,14 @@
 
 import UIKit
 
-public class QSView: UIView {
+open class QSView: UIView {
     // MARK: - Init Method
     @available(*, unavailable)
-    required init?(coder: NSCoder) {
+    required public init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 
-    override init(frame: CGRect) {
+    public override init(frame: CGRect) {
         super.init(frame: frame)
 
         addSubSnaps()
@@ -23,9 +23,9 @@ public class QSView: UIView {
     }
 
     // MARK: - UI Layout Method
-    internal func addSubSnaps() {
+    open func addSubSnaps() {
     }
 
-    internal func layoutSnaps() {
+    open func layoutSnaps() {
     }
 }

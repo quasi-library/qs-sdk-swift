@@ -8,17 +8,17 @@
 
 import UIKit
 
-class QSCollectionViewItem: UICollectionViewCell {
+open class QSCollectionViewItem: UICollectionViewCell {
     // MARK: - Init Method
     @available(*, unavailable)
-    required init?(coder: NSCoder) {
+    required public init?(coder: NSCoder) {
         super.init(coder: coder)
 
         addSubSnaps()
         layoutSnaps()
     }
 
-    override init(frame: CGRect) {
+    public override init(frame: CGRect) {
         super.init(frame: frame)
 
         addSubSnaps()
@@ -26,9 +26,7 @@ class QSCollectionViewItem: UICollectionViewCell {
     }
 
     // MARK: - UI Layout Method
-    func addSubSnaps() {
-    }
+    open func addSubSnaps() { }
 
-    func layoutSnaps() {
-    }
+    open func layoutSnaps() { }
 }

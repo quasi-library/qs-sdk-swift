@@ -50,6 +50,10 @@
 		598D67022A5FE309006216DE /* DemoSimpleListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598D67012A5FE309006216DE /* DemoSimpleListViewModel.swift */; };
 		598D67052A5FEC5B006216DE /* ExampleButtonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598D67032A5FEC5B006216DE /* ExampleButtonController.swift */; };
 		598D67062A5FEC5B006216DE /* ExampleDoubleSliderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598D67042A5FEC5B006216DE /* ExampleDoubleSliderController.swift */; };
+		59A72F462A5FEEA600A12A39 /* QSProgressViewPager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A72F452A5FEEA600A12A39 /* QSProgressViewPager.swift */; };
+		59A72F482A5FEFCD00A12A39 /* QSKitLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59A72F472A5FEFCD00A12A39 /* QSKitLibrary.framework */; };
+		59A72F4A2A5FF24E00A12A39 /* ExampleViewPagerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A72F492A5FF24E00A12A39 /* ExampleViewPagerController.swift */; };
+		59A72F4C2A5FF48100A12A39 /* QSViewPagerIndicatorItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A72F4B2A5FF48100A12A39 /* QSViewPagerIndicatorItem.swift */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
@@ -113,6 +117,10 @@
 		598D67012A5FE309006216DE /* DemoSimpleListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoSimpleListViewModel.swift; sourceTree = "<group>"; };
 		598D67032A5FEC5B006216DE /* ExampleButtonController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleButtonController.swift; sourceTree = "<group>"; };
 		598D67042A5FEC5B006216DE /* ExampleDoubleSliderController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleDoubleSliderController.swift; sourceTree = "<group>"; };
+		59A72F452A5FEEA600A12A39 /* QSProgressViewPager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QSProgressViewPager.swift; sourceTree = "<group>"; };
+		59A72F472A5FEFCD00A12A39 /* QSKitLibrary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = QSKitLibrary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		59A72F492A5FF24E00A12A39 /* ExampleViewPagerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleViewPagerController.swift; sourceTree = "<group>"; };
+		59A72F4B2A5FF48100A12A39 /* QSViewPagerIndicatorItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QSViewPagerIndicatorItem.swift; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* QSKitLibrary_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QSKitLibrary_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -134,6 +142,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59A72F482A5FEFCD00A12A39 /* QSKitLibrary.framework in Frameworks */,
 				ADF96AEF27A3A7B64309C1B7 /* Pods_QSKitLibrary_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -379,7 +388,9 @@
 		598D66FD2A5FE0D7006216DE /* TestModule */ = {
 			isa = PBXGroup;
 			children = (
+				59A72F442A5FEE2200A12A39 /* ViewModel */,
 				598D66FE2A5FE0FC006216DE /* Controller */,
+				59A72F432A5FEE0B00A12A39 /* View */,
 			);
 			path = TestModule;
 			sourceTree = "<group>";
@@ -390,8 +401,25 @@
 				598D66F42A5FDE23006216DE /* DemoTestingListController.swift */,
 				598D67032A5FEC5B006216DE /* ExampleButtonController.swift */,
 				598D67042A5FEC5B006216DE /* ExampleDoubleSliderController.swift */,
+				59A72F492A5FF24E00A12A39 /* ExampleViewPagerController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		59A72F432A5FEE0B00A12A39 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				59A72F452A5FEEA600A12A39 /* QSProgressViewPager.swift */,
+				59A72F4B2A5FF48100A12A39 /* QSViewPagerIndicatorItem.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		59A72F442A5FEE2200A12A39 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		607FACC71AFB9204008FA782 = {
@@ -481,6 +509,7 @@
 		8275EEBAF16CA2FC29589E40 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				59A72F472A5FEFCD00A12A39 /* QSKitLibrary.framework */,
 				F2C9EB0E725DD4664F7128CB /* Pods_QSKitLibrary_Example.framework */,
 				93BFE2F05606E49206E9342E /* libPods-QSKitLibrary_Tests.a */,
 			);
@@ -719,6 +748,7 @@
 				59767ED32A5FC877005726D4 /* VSFile.swift in Sources */,
 				598D67002A5FE292006216DE /* DemoEntryItemCell.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				59A72F462A5FEEA600A12A39 /* QSProgressViewPager.swift in Sources */,
 				59767ED22A5FC877005726D4 /* VSCache.swift in Sources */,
 				59767EAA2A5FC877005726D4 /* VSCollectionViewAlignLeftFlowLayout.swift in Sources */,
 				59767EC62A5FC877005726D4 /* VSMobileInfo.swift in Sources */,
@@ -727,10 +757,12 @@
 				59767E9D2A5FC877005726D4 /* SceneDelegate.swift in Sources */,
 				59767ECF2A5FC877005726D4 /* QSWebDomain.swift in Sources */,
 				59767EA32A5FC877005726D4 /* VSCommon.swift in Sources */,
+				59A72F4C2A5FF48100A12A39 /* QSViewPagerIndicatorItem.swift in Sources */,
 				59767EAE2A5FC877005726D4 /* TabbarViewModel.swift in Sources */,
 				59767EA82A5FC877005726D4 /* VSClockSharpPicker.swift in Sources */,
 				59767ECE2A5FC877005726D4 /* VSVolumeUnit.swift in Sources */,
 				598D67062A5FEC5B006216DE /* ExampleDoubleSliderController.swift in Sources */,
+				59A72F4A2A5FF24E00A12A39 /* ExampleViewPagerController.swift in Sources */,
 				59767ECA2A5FC877005726D4 /* QSApi.swift in Sources */,
 				59767ECD2A5FC877005726D4 /* VSDeviceModelType.swift in Sources */,
 				59767EAF2A5FC877005726D4 /* QSTabBarController.swift in Sources */,

@@ -36,7 +36,7 @@ public class VSBadgeGreenView: QSView {
     }
 
     // MARK: - UI Layout Method
-    override func addSubSnaps() {
+    public override func addSubSnaps() {
         super.addSubSnaps()
 
         self.addSubview(outView)
@@ -46,7 +46,7 @@ public class VSBadgeGreenView: QSView {
         outView.addSubview(countLabel)
     }
 
-    override func layoutSnaps() {
+    public override func layoutSnaps() {
         super.layoutSnaps()
 
         outView.snp.makeConstraints { make in
