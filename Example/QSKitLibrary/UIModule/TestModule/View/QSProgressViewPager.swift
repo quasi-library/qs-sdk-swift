@@ -41,6 +41,7 @@ class QSProgressViewPager: QSView {
         } else {
             self.currentIndex = 0
         }
+        self.reloadData()
     }
 
     // MARK: - UI Layout Method
@@ -61,6 +62,7 @@ class QSProgressViewPager: QSView {
         }
     }
 
+    /// 默认创建一页气泡
     private func createPageController() {
         guard let parentViewController = self.mViewController else {
             return
@@ -86,19 +88,38 @@ class QSProgressViewPager: QSView {
             make.top.equalTo(progressBar.snp.bottom).offset(8)
             make.leading.equalToSuperview().offset(16)
             make.trailing.equalToSuperview().offset(0)
-            make.height.equalTo(100)
+            make.height.equalTo(155)
             make.bottom.equalToSuperview()
         }
     }
 
-    // 创建指定索引的 BubbleViewController
-     func createBubbleViewController(index: Int) -> QSViewPagerBubbleController {
-         // 创建和配置 BubbleViewController 实例
-         let bubbleViewController = QSViewPagerBubbleController()
-         // 设置相应的内容
-         // ...
-         return bubbleViewController
-     }
+    /// 创建指定索引的 BubbleViewController
+    private func createBubbleViewController(index: Int) -> QSViewPagerBubbleController {
+        // 创建和配置 BubbleViewController 实例
+        let bubbleViewController = QSViewPagerBubbleController()
+        // 设置相应的内容
+        // ...
+        return bubbleViewController
+    }
+
+    /// 刷新数据源，重载气泡视图数量
+    private func reloadData(){
+        DispatchQueue.main.async {
+            var pages: [QSViewPagerBubbleController] = []
+            self.mDataSource.enumerated().forEach { (index, model) in
+                let page = self.createBubbleViewController(index: index)
+                pages.append(page)
+            }
+
+            self.mBubbleControllers = pages
+            self.bubblesPageController.setViewControllers(
+                pages,
+                direction: .forward,
+                animated: true,
+                completion: nil
+            )
+        }
+    }
 
     /// 更新选中状态
     private func updateSelectedStatus() {
@@ -199,9 +220,9 @@ extension QSProgressViewPager: UIPageViewControllerDataSource, UIPageViewControl
         return mBubbleControllers[currentIndex + 1]
     }
 
-    /// 返回页面数量
+    /// 返回页面数量(不实现则隐藏圆点，实现则展示圆点数量)
     func presentationCount(for pageViewController: UIPageViewController) -> Int {
-        return mBubbleControllers.count
+        return mDataSource.count
     }
 
     /// 返回当前页面索引
