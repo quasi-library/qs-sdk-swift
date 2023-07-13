@@ -187,7 +187,8 @@ class ExampleViewPagerController: QSBaseViewController {
 
     private lazy var stagesPreview: QSProgressViewPager = {
         let _viewpager = QSProgressViewPager(
-            stageList: ["1", "2", "3"],
+            controller: self,
+            stageList: ["1", "2", "3", "4", "5"],
             currentStage: "2"
         )
         _viewpager.backgroundColor = .systemPink

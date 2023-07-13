@@ -11,6 +11,11 @@ import QSKitLibrary
 
 class QSProgressViewPager: QSView {
     // MARK: - Property
+    /// 因为UIPageViewController需要添加在父级UIView Controller才工作
+    private weak var mViewController: UIViewController?
+    /// 下方气泡展示视图
+    private var mBubbleControllers: [QSViewPagerBubbleController] = []
+
     var mDataSource: [String] = []
 
     var currentIndex: Int = 0 {
@@ -21,12 +26,16 @@ class QSProgressViewPager: QSView {
 
     // MARK: - Init / Public Method
     convenience init(
+        controller: UIViewController?,
         stageList: [String],
         currentStage: String?
     ) {
         self.init(frame: .zero)
 
         self.mDataSource = stageList
+        self.mViewController = controller
+
+        self.createPageController()
         if let currentStage, let selectIndex = stageList.firstIndex(of: currentStage) {
             self.currentIndex = selectIndex
         } else {
@@ -49,10 +58,47 @@ class QSProgressViewPager: QSView {
             make.trailing.equalToSuperview().offset(-16)
             make.top.equalToSuperview()
             make.height.equalTo(30)
+        }
+    }
+
+    private func createPageController() {
+        guard let parentViewController = self.mViewController else {
+            return
+        }
+        // 创建初始的 BubbleViewController
+        let initialViewController = createBubbleViewController(index: 0)
+        self.mBubbleControllers = [initialViewController]
+
+        // 将初始视图控制器添加到 pageViewController
+        self.bubblesPageController.setViewControllers(
+            [initialViewController],
+            direction: .forward,
+            animated: true,
+            completion: nil
+        )
+        // 将 pageViewController 添加到视图层次结构中
+        parentViewController.addChildViewController(self.bubblesPageController)
+        self.addSubview(bubblesPageController.view)
+        bubblesPageController.didMove(toParentViewController: parentViewController)
+
+        // 布局
+        bubblesPageController.view.snp.makeConstraints { make in
+            make.top.equalTo(progressBar.snp.bottom).offset(8)
+            make.leading.equalToSuperview().offset(16)
+            make.trailing.equalToSuperview().offset(0)
+            make.height.equalTo(100)
             make.bottom.equalToSuperview()
         }
     }
 
+    // 创建指定索引的 BubbleViewController
+     func createBubbleViewController(index: Int) -> QSViewPagerBubbleController {
+         // 创建和配置 BubbleViewController 实例
+         let bubbleViewController = QSViewPagerBubbleController()
+         // 设置相应的内容
+         // ...
+         return bubbleViewController
+     }
 
     /// 更新选中状态
     private func updateSelectedStatus() {
@@ -61,13 +107,13 @@ class QSProgressViewPager: QSView {
 
     // MARK: - Lazy Method
     private let kItemId = "QSViewPagerIndicatorItem"
-    private let kItemSpace: CGFloat = 1.0
+    private let kItemSpace: CGFloat = 3.0
+    /// 上方的进度条区域
     private lazy var progressBar: UICollectionView = {
         let flowLayout = UICollectionViewFlowLayout()
         flowLayout.scrollDirection = .horizontal
         flowLayout.minimumLineSpacing = kItemSpace
         flowLayout.minimumInteritemSpacing = kItemSpace // 同行两横条间距
-//        flowLayout.itemSize = CGSize(width: 58, height: 86)
 
         let collectView = UICollectionView(frame: CGRect.zero, collectionViewLayout: flowLayout)
         collectView.backgroundColor = UIColor.appMainClear
@@ -75,6 +121,14 @@ class QSProgressViewPager: QSView {
         collectView.dataSource = self
         collectView.register(QSViewPagerIndicatorItem.self, forCellWithReuseIdentifier: kItemId)
         return collectView
+    }()
+
+    /// 下方的详情气泡
+    private lazy var bubblesPageController: UIPageViewController = {
+        let _pagerView = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
+        _pagerView.dataSource = self
+        _pagerView.delegate = self
+        return _pagerView
     }()
 }
 
@@ -124,6 +178,38 @@ extension QSProgressViewPager: UICollectionViewDataSource, UICollectionViewDeleg
         let itemHeight = 30.0
         return CGSize(width: itemWidth, height: itemHeight)
     }
-
 }
 
+extension QSProgressViewPager: UIPageViewControllerDataSource, UIPageViewControllerDelegate {
+    /// 返回前一个 BubbleViewController
+    func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
+        guard let currentIndex = mBubbleControllers.firstIndex(of: viewController as! QSViewPagerBubbleController),
+              currentIndex > 0 else {
+            return nil
+        }
+        return mBubbleControllers[currentIndex - 1]
+    }
+
+    /// 返回后一个 BubbleViewController
+    func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
+        guard let currentIndex = mBubbleControllers.firstIndex(of: viewController as! QSViewPagerBubbleController),
+              currentIndex < mBubbleControllers.count - 1 else {
+            return nil
+        }
+        return mBubbleControllers[currentIndex + 1]
+    }
+
+    /// 返回页面数量
+    func presentationCount(for pageViewController: UIPageViewController) -> Int {
+        return mBubbleControllers.count
+    }
+
+    /// 返回当前页面索引
+    func presentationIndex(for pageViewController: UIPageViewController) -> Int {
+        guard let currentViewController = pageViewController.viewControllers?.first as? QSViewPagerBubbleController else {
+            return 0
+        }
+        return mBubbleControllers.firstIndex(of: currentViewController) ?? 0
+    }
+
+}

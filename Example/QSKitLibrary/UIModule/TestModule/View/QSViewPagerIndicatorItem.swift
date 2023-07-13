@@ -19,17 +19,11 @@ public class QSViewPagerIndicatorItem: QSCollectionViewItem {
         case before, current, after
     }
 
-    private var mLocation: QSViewPagerIndicatorItem.Location = .center {
-        didSet {
-            setNeedsLayout()
-        }
-    }
+    private var mLocation: QSViewPagerIndicatorItem.Location = .center
 
-    private var mStatus: QSViewPagerIndicatorItem.Status = .before {
-        didSet {
-            setNeedsLayout()
-        }
-    }
+    private var mStatus: QSViewPagerIndicatorItem.Status = .before
+
+    private weak var mShapeLayer: CAShapeLayer?
 
     // MARK: - Init / Public Method
     public override init(frame: CGRect) {
@@ -46,6 +40,7 @@ public class QSViewPagerIndicatorItem: QSCollectionViewItem {
         self.mLocation = location
         self.mStatus = status
 
+        self.setNeedsLayout()
         self.layoutIfNeeded()
     }
 
@@ -76,6 +71,11 @@ public class QSViewPagerIndicatorItem: QSCollectionViewItem {
     public override func layoutSubviews() {
         super.layoutSubviews()
 
+        if let oldLayer = mShapeLayer {
+            oldLayer.removeFromSuperlayer()
+        }
+
+        let maskLayer = CAShapeLayer()
         // 更新圆角展示
         var cornerRadii: UIRectCorner = []
         switch mLocation {
@@ -88,24 +88,38 @@ public class QSViewPagerIndicatorItem: QSCollectionViewItem {
         }
 
         let path = UIBezierPath(
-            roundedRect: indicatorLine.frame,
+            roundedRect: indicatorLine.bounds,
             byRoundingCorners: cornerRadii,
-            cornerRadii: CGSize(width: 4, height: 4)
+            cornerRadii: CGSize(width: 8, height: 8)
         )
-
-        let maskLayer = CAShapeLayer()
         maskLayer.path = path.cgPath
-        indicatorLine.layer.mask = maskLayer
+
+        // 更新指示颜色
+        var strokeColor: UIColor = .appMainGreen
+        var fillColor: UIColor = .appMainLightBrown
+
+        switch self.mStatus {
+        case .before:
+            fillColor = .appMainGreen
+        case .current:
+            fillColor = UIColor(hex: 0xF3FCF6)
+        case .after:
+            strokeColor = UIColor(hex: 0xCBC4BC)
+        }
+
+        maskLayer.strokeColor = strokeColor.cgColor
+        maskLayer.fillColor = fillColor.cgColor
+
+        maskLayer.borderWidth = 1.0
+        indicatorLine.layer.addSublayer(maskLayer)
+        self.mShapeLayer = maskLayer
     }
 
     // MARK: - Lazy Method
     /// 上方进度条，首尾圆角其余直角，状态不同填充颜色不同
     private lazy var indicatorLine: UIView = {
         let _indicatorLine = UIView()
-        _indicatorLine.backgroundColor = .appMainWhite
-        _indicatorLine.layer.borderWidth = 1
-        _indicatorLine.layer.backgroundColor = UIColor.hex(0xCBC4BC).cgColor
-        _indicatorLine.layer.borderColor = UIColor.appMainGreen.cgColor
+        _indicatorLine.backgroundColor = .appMainClear
 
          return _indicatorLine
     }()
