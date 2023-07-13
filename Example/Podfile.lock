@@ -10,7 +10,7 @@ PODS:
   - libwebp/webp (1.2.4)
   - lottie-ios (4.2.0)
   - MJRefresh (3.7.5)
-  - QSKitLibrary (0.1.0):
+  - QSKitLibrary (0.1.1):
     - MJRefresh (~> 3.7.5)
     - RxCocoa (~> 6.5.0)
     - RxSwift (~> 6.5.0)
@@ -81,7 +81,7 @@ SPEC CHECKSUMS:
   libwebp: f62cb61d0a484ba548448a4bd52aabf150ff6eef
   lottie-ios: 809ecf2d460ed650a6aed7aa88b2ec45fab4779c
   MJRefresh: fdf5e979eb406a0341468932d1dfc8b7f9fce961
-  QSKitLibrary: 47c7066afe0c56074259cd6226a9746c48ea35ab
+  QSKitLibrary: d0e3dc9aa20ae2dcc1d00c2ff9855f73f267aa9f
   Realm: fdf6732924dc5e69e30e0db2c11e869f92b53f3d
   RealmSwift: 7c181da8fa1c2fe613656a77c198d6a3dc3879a1
   RxCocoa: 94f817b71c07517321eb4f9ad299112ca8af743b

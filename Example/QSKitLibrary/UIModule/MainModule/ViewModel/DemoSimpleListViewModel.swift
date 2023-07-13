@@ -12,11 +12,14 @@ import QSKitLibrary
 class DemoSimpleListViewModel: QSBaseViewModel {
     enum Entry {
         case testButton
+        case testSliderDouble
 
         var entryName: String {
             switch self {
             case .testButton:
                 return "测试QSButton"
+            case .testSliderDouble:
+                return "测试双向滑杆"
 //            default:
 //                return "未知"
             }
@@ -25,6 +28,6 @@ class DemoSimpleListViewModel: QSBaseViewModel {
     }
 
     // MARK: - Property
-    var mDataSource: [Entry] = [.testButton]
+    var mDataSource: [Entry] = [.testButton, .testSliderDouble]
 
 }

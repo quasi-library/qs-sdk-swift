@@ -48,7 +48,8 @@
 		598D66F52A5FDE23006216DE /* DemoTestingListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598D66F42A5FDE23006216DE /* DemoTestingListController.swift */; };
 		598D67002A5FE292006216DE /* DemoEntryItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598D66FF2A5FE291006216DE /* DemoEntryItemCell.swift */; };
 		598D67022A5FE309006216DE /* DemoSimpleListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598D67012A5FE309006216DE /* DemoSimpleListViewModel.swift */; };
-		59FC904627D73E5E0088C49A /* ExampleButtonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FC904527D73E5E0088C49A /* ExampleButtonController.swift */; };
+		598D67052A5FEC5B006216DE /* ExampleButtonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598D67032A5FEC5B006216DE /* ExampleButtonController.swift */; };
+		598D67062A5FEC5B006216DE /* ExampleDoubleSliderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598D67042A5FEC5B006216DE /* ExampleDoubleSliderController.swift */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
@@ -110,7 +111,8 @@
 		598D66F42A5FDE23006216DE /* DemoTestingListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoTestingListController.swift; sourceTree = "<group>"; };
 		598D66FF2A5FE291006216DE /* DemoEntryItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoEntryItemCell.swift; sourceTree = "<group>"; };
 		598D67012A5FE309006216DE /* DemoSimpleListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoSimpleListViewModel.swift; sourceTree = "<group>"; };
-		59FC904527D73E5E0088C49A /* ExampleButtonController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleButtonController.swift; sourceTree = "<group>"; };
+		598D67032A5FEC5B006216DE /* ExampleButtonController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleButtonController.swift; sourceTree = "<group>"; };
+		598D67042A5FEC5B006216DE /* ExampleDoubleSliderController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleDoubleSliderController.swift; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* QSKitLibrary_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QSKitLibrary_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -252,7 +254,6 @@
 				598D66EC2A5FD8B0006216DE /* QSWebViewController.swift */,
 				598D66F02A5FDDBD006216DE /* DemoSimpleListController.swift */,
 				598D66F22A5FDDE3006216DE /* DemoComplexListController.swift */,
-				59FC904527D73E5E0088C49A /* ExampleButtonController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -387,6 +388,8 @@
 			isa = PBXGroup;
 			children = (
 				598D66F42A5FDE23006216DE /* DemoTestingListController.swift */,
+				598D67032A5FEC5B006216DE /* ExampleButtonController.swift */,
+				598D67042A5FEC5B006216DE /* ExampleDoubleSliderController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -695,6 +698,7 @@
 				59767EB02A5FC877005726D4 /* InitInfoRespModel.swift in Sources */,
 				59767EA92A5FC877005726D4 /* QSDoubleSlider.swift in Sources */,
 				598D66F32A5FDDE3006216DE /* DemoComplexListController.swift in Sources */,
+				598D67052A5FEC5B006216DE /* ExampleButtonController.swift in Sources */,
 				59767ED02A5FC877005726D4 /* VSTemperatureUnit.swift in Sources */,
 				59767EAB2A5FC877005726D4 /* VSWaterFlowLayout.swift in Sources */,
 				59767EC82A5FC877005726D4 /* MineLocaleRespModel.swift in Sources */,
@@ -711,7 +715,6 @@
 				59767ED42A5FC877005726D4 /* VSLogZipRecord.swift in Sources */,
 				59767EAC2A5FC877005726D4 /* VSHUDLottieContentView.swift in Sources */,
 				598D66F12A5FDDBD006216DE /* DemoSimpleListController.swift in Sources */,
-				59FC904627D73E5E0088C49A /* ExampleButtonController.swift in Sources */,
 				598D66F52A5FDE23006216DE /* DemoTestingListController.swift in Sources */,
 				59767ED32A5FC877005726D4 /* VSFile.swift in Sources */,
 				598D67002A5FE292006216DE /* DemoEntryItemCell.swift in Sources */,
@@ -727,6 +730,7 @@
 				59767EAE2A5FC877005726D4 /* TabbarViewModel.swift in Sources */,
 				59767EA82A5FC877005726D4 /* VSClockSharpPicker.swift in Sources */,
 				59767ECE2A5FC877005726D4 /* VSVolumeUnit.swift in Sources */,
+				598D67062A5FEC5B006216DE /* ExampleDoubleSliderController.swift in Sources */,
 				59767ECA2A5FC877005726D4 /* QSApi.swift in Sources */,
 				59767ECD2A5FC877005726D4 /* VSDeviceModelType.swift in Sources */,
 				59767EAF2A5FC877005726D4 /* QSTabBarController.swift in Sources */,
@@ -818,11 +822,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -864,10 +869,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -926,7 +932,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/QSKitLibrary_Example.app/QSKitLibrary_Example";
 			};
 			name = Debug;
@@ -945,7 +951,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/QSKitLibrary_Example.app/QSKitLibrary_Example";
 			};
 			name = Release;

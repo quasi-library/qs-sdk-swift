@@ -113,6 +113,9 @@ extension DemoSimpleListController: UITableViewDelegate, UITableViewDataSource {
         case .testButton:
             let buttonVc = ExampleButtonController()
             self.navigationController?.show(buttonVc, sender: nil)
+        case .testSliderDouble:
+            let sliderVc = ExampleDoubleSliderController()
+            self.navigationController?.show(sliderVc, sender: nil)
         }
     }
 }
