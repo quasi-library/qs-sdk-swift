@@ -86,7 +86,7 @@ public class VSBadgeGreenView: QSView {
 
     private lazy var countLabel: UILabel = {
         let _countLabel = QSLabel(
-            style: .body12Regular,
+            design: .body12Regular,
             title: "0",
             color: .appMainWhite
         )

@@ -413,7 +413,7 @@ open class QSDoubleSlider: UIView {
     }()
 
     private lazy var leftTipsLabel: UILabel = {
-        let leftTipsLabel = QSLabel(style: .body13Regular, title: "")
+        let leftTipsLabel = QSLabel(design: .body13Regular, title: "")
         leftTipsLabel.textAlignment = .center
         leftTipsLabel.backgroundColor = UIColor.clear
         leftTipsLabel.frame = CGRect(x: 0, y: 0, width: 100, height: 20)
@@ -421,7 +421,7 @@ open class QSDoubleSlider: UIView {
     }()
 
     private lazy var rightTipsLabel: UILabel = {
-        let rightTipsLabel = QSLabel(style: .body13Regular, title: "")
+        let rightTipsLabel = QSLabel(design: .body13Regular, title: "")
         rightTipsLabel.textAlignment = .center
         rightTipsLabel.backgroundColor = UIColor.clear
         rightTipsLabel.frame = CGRect(x: 0, y: 0, width: 100, height: 20)

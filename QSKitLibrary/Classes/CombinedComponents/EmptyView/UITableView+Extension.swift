@@ -22,7 +22,7 @@ public extension UITableView {
         let backgroundView = UIView(frame: self.bounds)
 
         let tipsLabel = QSLabel(
-            style: .body15Regular,
+            design: .body15Regular,
             title: emptyType.desc,
             color: .textDescGray
         )

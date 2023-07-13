@@ -1,5 +1,5 @@
 //
-//  VSWebDomain.swift
+//  QSWebDomain.swift
 //  QuasiDemo
 //
 //  Created by Soul on 2022/9/2.
@@ -11,7 +11,7 @@ import Foundation
 /**
  枚举不同ipa时适用的h5根域名
  */
-public enum VSWebDomain: String {
+public enum QSWebDomain: String {
     case  WEB_DOMAIN_TEST = "https://test.quasi.com"
     case  WEB_DOMAIN_PRE_RELEASE = "https://pre.quasi.com"
     case  WEB_DOMAIN_PRODUCT = "https://quasi.com"

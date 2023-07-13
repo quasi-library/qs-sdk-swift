@@ -8,15 +8,15 @@
 
 import UIKit
 
-class QSTableViewCell: UITableViewCell {
+open class QSTableViewCell: UITableViewCell {
     // MARK: - Init Method
     @available(*, unavailable)
-    required init?(coder: NSCoder) {
+    required public init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 
     @available(*, unavailable)
-    override func awakeFromNib() {
+    public override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
@@ -30,16 +30,16 @@ class QSTableViewCell: UITableViewCell {
     }
 
     // MARK: - UI Layout Method
-    override func setSelected(_ selected: Bool, animated: Bool) {
+    open override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
     }
 
-    func addSubSnaps() {
+    open func addSubSnaps() {
     }
 
-    func layoutSnaps() {
+    open func layoutSnaps() {
     }
 
     // MARK: - UI Action Method

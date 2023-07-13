@@ -12,7 +12,7 @@ import UIKit
 public class QSLabel: UILabel {
     // MARK: - Property
     /// 内边距，也就是padding
-    var contentInset: UIEdgeInsets = .zero
+   public var contentInset: UIEdgeInsets = .zero
 
     // MARK: - Init Method
     required public init?(coder: NSCoder) {
@@ -40,7 +40,7 @@ public class QSLabel: UILabel {
     ///   - fontSize: 标题文字大小(默认传0，使用模板大小，需自定义再传值)
     /// - Returns: VSLabel
     public convenience init(
-        style: QSStandardDesignStyle,
+        design: QSStandardDesignStyle,
         title: String?,
         color: UIColor? = nil,
         fontSize: CGFloat = 0
@@ -48,7 +48,7 @@ public class QSLabel: UILabel {
         self.init()
 
         self.vsSetDesignStyle(
-            style,
+            design,
             title: title,
             color: color,
             fontSize: fontSize

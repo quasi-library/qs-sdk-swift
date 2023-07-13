@@ -18,7 +18,7 @@ open class QSBaseViewModel {
 
     // MARK: - Callback Signal
     /// 通用的报错信息，一般用于界面接受后展示toast
-    let errorDataSubject = PublishSubject<String?>()
+    public let errorDataSubject = PublishSubject<String?>()
 
     // MARK: - LifeCycle Method
     deinit {

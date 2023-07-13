@@ -9,7 +9,7 @@
 import UIKit
 import QSKitLibrary
 
-class QSButtonDemoController: UIViewController {
+class ExampleButtonController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

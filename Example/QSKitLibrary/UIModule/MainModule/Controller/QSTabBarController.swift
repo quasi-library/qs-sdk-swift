@@ -34,25 +34,26 @@ class QSTabBarController: UITabBarController {
         self.makeInitRequest()
 
         let growNav = createSubNav(
-            title: "Garden",
-            classType: GrowIndexController.self,
+            title: "基础控件",
+            classType: DemoSimpleListController.self,
             imagePrefix: "grow"
         )
 
-        let shopNav = createSubNav(
-            title: "Shop",
-            classType: ShopMallController.self,
+        let meNav = createSubNav(
+            title: "组合控件",
+            classType: DemoComplexListController.self,
             imagePrefix: "mall"
         )
 
-        let meNav = createSubNav(
-            title: "Me",
-            classType: MineController.self,
+        let testingNav = createSubNav(
+            title: "调试页面",
+            classType: DemoTestingListController.self,
             imagePrefix: "me"
         )
+
         self.meNav = meNav
         // 将页面添加到 tabBarController
-        self.viewControllers = [growNav, shopNav, meNav]
+        self.viewControllers = [growNav, meNav, testingNav]
 
         // 自定义标签栏的外观
         if #available(iOS 13.0, *) {
@@ -71,6 +72,10 @@ class QSTabBarController: UITabBarController {
                 tabBar.scrollEdgeAppearance = appearance
             }
         }
+
+        #if DEBUG
+        self.selectedIndex = 2
+        #endif
     }
 
     // MARK: - Bind Method

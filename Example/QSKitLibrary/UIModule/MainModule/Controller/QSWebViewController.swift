@@ -263,17 +263,17 @@ public class QSWebViewController: UIViewController {
         self.init()
 
     #if DEBUG
-        var host: VSWebDomain
+        var host: QSWebDomain
         switch QS_API_HOST {
         case QSApi.Host.Product.rawValue:
-            host = VSWebDomain.WEB_DOMAIN_PRODUCT
+            host = QSWebDomain.WEB_DOMAIN_PRODUCT
         case QSApi.Host.PreRelease.rawValue:
-            host = VSWebDomain.WEB_DOMAIN_PRE_RELEASE
+            host = QSWebDomain.WEB_DOMAIN_PRE_RELEASE
         default:
-            host = VSWebDomain.WEB_DOMAIN_TEST
+            host = QSWebDomain.WEB_DOMAIN_TEST
         }
     #else
-        let host = VSWebDomain.WEB_DOMAIN_PRODUCT
+        let host = QSWebDomain.WEB_DOMAIN_PRODUCT
     #endif
 
         let url = URL(string: host.rawValue + vsPath.rawValue)
@@ -287,17 +287,17 @@ public class QSWebViewController: UIViewController {
         self.init()
 
     #if DEBUG
-        var host: VSWebDomain
+        var host: QSWebDomain
         switch QS_API_HOST {
         case QSApi.Host.Product.rawValue:
-            host = VSWebDomain.WEB_DOMAIN_PRODUCT
+            host = QSWebDomain.WEB_DOMAIN_PRODUCT
         case QSApi.Host.PreRelease.rawValue:
-            host = VSWebDomain.WEB_DOMAIN_PRE_RELEASE
+            host = QSWebDomain.WEB_DOMAIN_PRE_RELEASE
         default:
-            host = VSWebDomain.WEB_DOMAIN_TEST
+            host = QSWebDomain.WEB_DOMAIN_TEST
         }
     #else
-        let host = VSWebDomain.WEB_DOMAIN_PRODUCT
+        let host = QSWebDomain.WEB_DOMAIN_PRODUCT
     #endif
 
         if customUrl.hasPrefix("http://") || customUrl.hasPrefix("https://") {

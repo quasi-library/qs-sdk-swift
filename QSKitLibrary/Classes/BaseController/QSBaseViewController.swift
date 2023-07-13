@@ -12,7 +12,7 @@ import RxSwift
 
 @objc open class QSBaseViewController: UIViewController {
     // MARK: - LifeCycle Method
-    internal let mDisposeBag = DisposeBag()
+    public let mDisposeBag = DisposeBag()
     deinit {
         debugPrint(self, "🦁️ dealloc 已释放")
     }
@@ -61,11 +61,12 @@ import RxSwift
     }
 
     // MARK: - Bind Method
-    func bindViewModel () {
-//        _ = mViewModel.errorDataSubject.subscribe { errMessage in
-//             VSShowNewHUD.dismiss()
-//             VSShowNewHUD.showText(errMessage)
-//        }
+    open func bindViewModel () {
+//        mViewModel.errorDataSubject
+//            .subscribe(with: self) { weakself, errMessage in
+//                debugPrint(weakself, "接收到报错信息 \n", errMessage as Any)
+//            }
+//            .disposed(by: mDisposeBag)
     }
 
     // MARK: - UI Layout Method
@@ -143,7 +144,7 @@ import RxSwift
     /**
      拆分ViewDidLoad方法，在基类中执行默认操作，并供子类复写“添加UI组件”
      */
-    internal func addSubSnaps() {
+    open func addSubSnaps() {
         self.view.backgroundColor = UIColor.appBackgroundPage
         // 供子类添加initView和addSubView的方法
     }
@@ -151,7 +152,7 @@ import RxSwift
     /**
      拆分ViewDidLoad方法，在基类中执行默认操作，并供子类复写“更新UI组件布局”
      */
-    internal func layoutSnaps() {
+    open func layoutSnaps() {
         // 1. 更新导航栏
 //        self.navigationController?.interactivePopGestureRecognizer?.delegate = self
         // 导航栏 默认白底黑字

@@ -155,7 +155,7 @@ class VSBottomAlertView: UIView {
     }()
 
     private lazy var titleLabel: QSLabel = {
-        let _titleLabel = QSLabel(style: .heading16Bold, title: "Alert")
+        let _titleLabel = QSLabel(design: .heading16Bold, title: "Alert")
         return _titleLabel
     }()
 
