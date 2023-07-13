@@ -1,16 +1,101 @@
 PODS:
-  - QSKitLibrary (0.1.0)
+  - libwebp (1.2.4):
+    - libwebp/demux (= 1.2.4)
+    - libwebp/mux (= 1.2.4)
+    - libwebp/webp (= 1.2.4)
+  - libwebp/demux (1.2.4):
+    - libwebp/webp
+  - libwebp/mux (1.2.4):
+    - libwebp/demux
+  - libwebp/webp (1.2.4)
+  - lottie-ios (4.2.0)
+  - MJRefresh (3.7.5)
+  - QSKitLibrary (0.1.0):
+    - MJRefresh (~> 3.7.5)
+    - RxCocoa (~> 6.5.0)
+    - RxSwift (~> 6.5.0)
+    - SnapKit (~> 5.6.0)
+    - SnapKitExtend (~> 1.1.0)
+    - SwiftEntryKit (~> 2.0.0)
+  - Realm (10.32.3):
+    - Realm/Headers (= 10.32.3)
+  - Realm/Headers (10.32.3)
+  - RealmSwift (10.32.3):
+    - Realm (= 10.32.3)
+  - RxCocoa (6.5.0):
+    - RxRelay (= 6.5.0)
+    - RxSwift (= 6.5.0)
+  - RxRelay (6.5.0):
+    - RxSwift (= 6.5.0)
+  - RxSwift (6.5.0)
+  - SDWebImage (5.15.8):
+    - SDWebImage/Core (= 5.15.8)
+  - SDWebImage/Core (5.15.8)
+  - SDWebImageWebPCoder (0.11.0):
+    - libwebp (~> 1.0)
+    - SDWebImage/Core (~> 5.15)
+  - SnapKit (5.6.0)
+  - SnapKitExtend (1.1.0):
+    - SnapKit
+  - SwiftEntryKit (2.0.0)
+  - SwiftKeychainWrapper (4.0.1)
+  - Zip (2.1.2)
+  - ZLPhotoBrowser (4.4.2):
+    - ZLPhotoBrowser/Core (= 4.4.2)
+  - ZLPhotoBrowser/Core (4.4.2)
 
 DEPENDENCIES:
+  - lottie-ios (~> 4.2.0)
   - QSKitLibrary (from `../`)
+  - RealmSwift (~> 10.32.3)
+  - SDWebImage (~> 5.15.8)
+  - SDWebImageWebPCoder (~> 0.11.0)
+  - SwiftKeychainWrapper (~> 4.0.1)
+  - Zip (~> 2.1.2)
+  - ZLPhotoBrowser (~> 4.4.2)
+
+SPEC REPOS:
+  trunk:
+    - libwebp
+    - lottie-ios
+    - MJRefresh
+    - Realm
+    - RealmSwift
+    - RxCocoa
+    - RxRelay
+    - RxSwift
+    - SDWebImage
+    - SDWebImageWebPCoder
+    - SnapKit
+    - SnapKitExtend
+    - SwiftEntryKit
+    - SwiftKeychainWrapper
+    - Zip
+    - ZLPhotoBrowser
 
 EXTERNAL SOURCES:
   QSKitLibrary:
     :path: "../"
 
 SPEC CHECKSUMS:
-  QSKitLibrary: 3300648e02cfe6d154b5dff24fbdd16e7e804181
+  libwebp: f62cb61d0a484ba548448a4bd52aabf150ff6eef
+  lottie-ios: 809ecf2d460ed650a6aed7aa88b2ec45fab4779c
+  MJRefresh: fdf5e979eb406a0341468932d1dfc8b7f9fce961
+  QSKitLibrary: 47c7066afe0c56074259cd6226a9746c48ea35ab
+  Realm: fdf6732924dc5e69e30e0db2c11e869f92b53f3d
+  RealmSwift: 7c181da8fa1c2fe613656a77c198d6a3dc3879a1
+  RxCocoa: 94f817b71c07517321eb4f9ad299112ca8af743b
+  RxRelay: 1de1523e604c72b6c68feadedd1af3b1b4d0ecbd
+  RxSwift: 5710a9e6b17f3c3d6e40d6e559b9fa1e813b2ef8
+  SDWebImage: cb032eba469c54e0000e78bcb0a13cdde0a52798
+  SDWebImageWebPCoder: 295a6573c512f54ad2dd58098e64e17dcf008499
+  SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
+  SnapKitExtend: aa30cf37196195fae9c4354686cc7710184ebfcc
+  SwiftEntryKit: 61b5fa36f34a97dd8013e48a7345bc4c4720be9a
+  SwiftKeychainWrapper: 807ba1d63c33a7d0613288512399cd1eda1e470c
+  Zip: b3fef584b147b6e582b2256a9815c897d60ddc67
+  ZLPhotoBrowser: ea6b3c04cb40d65e17c55f636cf1739c12953fef
 
-PODFILE CHECKSUM: dcb80a18928d0f3d3d8586b462275e9b55cfb1a0
+PODFILE CHECKSUM: f7ecd7100903bc6f47e6f4429178acd8c51403a8
 
-COCOAPODS: 1.11.2
+COCOAPODS: 1.12.1

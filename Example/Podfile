@@ -1,13 +1,32 @@
-use_frameworks!
+# Uncomment the next line to define a global platform for your project
+platform :ios, '13.0'
 
-platform :ios, '9.0'
+# 忽略引入库的所有警告
+inhibit_all_warnings!
 
 target 'QSKitLibrary_Example' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
   pod 'QSKitLibrary', :path => '../'
 
-  target 'QSKitLibrary_Tests' do
-    inherit! :search_paths
+  # Pods for QuasiDemo, 按首字排序
+  pod 'lottie-ios', '~> 4.2.0'
+  pod 'RealmSwift', '~> 10.32.3'
+  pod 'SDWebImage', '~> 5.15.8', :modular_headers => true
+#  pod 'SDWebImageSVGKitPlugin', '~> 1.4.0'
+  pod 'SDWebImageWebPCoder', '~> 0.11.0'
+  #  pod 'SVProgressHUD', '~> 2.2.5'
+  # 方便使用钥匙串
+  pod 'SwiftKeychainWrapper', '~> 4.0.1'
+  # 压缩解压缩文件目录
+  pod 'Zip', '~> 2.1.2'
+  # 仿微信图片选择器框架
+  pod 'ZLPhotoBrowser', '~> 4.4.2'
 
-    
-  end
+end
+
+target 'QSKitLibrary_Tests' do
+  inherit! :search_paths
+
 end

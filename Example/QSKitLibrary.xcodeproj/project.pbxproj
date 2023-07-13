@@ -7,15 +7,52 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06A92BFA04294D352F5FA4F2 /* libPods-QSKitLibrary_Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 93BFE2F05606E49206E9342E /* libPods-QSKitLibrary_Tests.a */; };
+		59767E9D2A5FC877005726D4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59767E312A5FC876005726D4 /* SceneDelegate.swift */; };
+		59767EA12A5FC877005726D4 /* XibInitial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59767E382A5FC876005726D4 /* XibInitial.swift */; };
+		59767EA32A5FC877005726D4 /* VSCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59767E3A2A5FC876005726D4 /* VSCommon.swift */; };
+		59767EA42A5FC877005726D4 /* ShopMallController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59767E3C2A5FC876005726D4 /* ShopMallController.swift */; };
+		59767EA52A5FC877005726D4 /* GrowIndexController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59767E3D2A5FC876005726D4 /* GrowIndexController.swift */; };
+		59767EA62A5FC877005726D4 /* MineController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59767E3E2A5FC876005726D4 /* MineController.swift */; };
+		59767EA72A5FC877005726D4 /* VSAppstoreReviewAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59767E412A5FC876005726D4 /* VSAppstoreReviewAlert.swift */; };
+		59767EA82A5FC877005726D4 /* VSClockSharpPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59767E432A5FC876005726D4 /* VSClockSharpPicker.swift */; };
+		59767EA92A5FC877005726D4 /* QSDoubleSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59767E452A5FC876005726D4 /* QSDoubleSlider.swift */; };
+		59767EAA2A5FC877005726D4 /* VSCollectionViewAlignLeftFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59767E472A5FC876005726D4 /* VSCollectionViewAlignLeftFlowLayout.swift */; };
+		59767EAB2A5FC877005726D4 /* VSWaterFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59767E482A5FC876005726D4 /* VSWaterFlowLayout.swift */; };
+		59767EAC2A5FC877005726D4 /* VSHUDLottieContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59767E4B2A5FC876005726D4 /* VSHUDLottieContentView.swift */; };
+		59767EAE2A5FC877005726D4 /* TabbarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59767E4F2A5FC876005726D4 /* TabbarViewModel.swift */; };
+		59767EAF2A5FC877005726D4 /* QSTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59767E512A5FC876005726D4 /* QSTabBarController.swift */; };
+		59767EB02A5FC877005726D4 /* InitInfoRespModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59767E532A5FC876005726D4 /* InitInfoRespModel.swift */; };
+		59767EB12A5FC877005726D4 /* GlobalConfigRespModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59767E542A5FC876005726D4 /* GlobalConfigRespModel.swift */; };
+		59767EB22A5FC877005726D4 /* VSRoundedTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59767E562A5FC876005726D4 /* VSRoundedTabBar.swift */; };
+		59767EB32A5FC877005726D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59767E572A5FC876005726D4 /* Assets.xcassets */; };
+		59767EB42A5FC877005726D4 /* VSDateHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59767E5A2A5FC876005726D4 /* VSDateHandler.swift */; };
+		59767EB52A5FC877005726D4 /* VSGoodsShowHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59767E5B2A5FC876005726D4 /* VSGoodsShowHandler.swift */; };
+		59767EC62A5FC877005726D4 /* VSMobileInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59767E762A5FC877005726D4 /* VSMobileInfo.swift */; };
+		59767EC72A5FC877005726D4 /* VSUserInfoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59767E782A5FC877005726D4 /* VSUserInfoManager.swift */; };
+		59767EC82A5FC877005726D4 /* MineLocaleRespModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59767E792A5FC877005726D4 /* MineLocaleRespModel.swift */; };
+		59767EC92A5FC877005726D4 /* VSError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59767E7B2A5FC877005726D4 /* VSError.swift */; };
+		59767ECA2A5FC877005726D4 /* QSApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59767E7C2A5FC877005726D4 /* QSApi.swift */; };
+		59767ECB2A5FC877005726D4 /* VSNotificationName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59767E7D2A5FC877005726D4 /* VSNotificationName.swift */; };
+		59767ECC2A5FC877005726D4 /* VSHeightUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59767E7E2A5FC877005726D4 /* VSHeightUnit.swift */; };
+		59767ECD2A5FC877005726D4 /* VSDeviceModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59767E7F2A5FC877005726D4 /* VSDeviceModelType.swift */; };
+		59767ECE2A5FC877005726D4 /* VSVolumeUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59767E802A5FC877005726D4 /* VSVolumeUnit.swift */; };
+		59767ECF2A5FC877005726D4 /* VSWebDomain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59767E812A5FC877005726D4 /* VSWebDomain.swift */; };
+		59767ED02A5FC877005726D4 /* VSTemperatureUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59767E822A5FC877005726D4 /* VSTemperatureUnit.swift */; };
+		59767ED12A5FC877005726D4 /* VSRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59767E842A5FC877005726D4 /* VSRealm.swift */; };
+		59767ED22A5FC877005726D4 /* VSCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59767E852A5FC877005726D4 /* VSCache.swift */; };
+		59767ED32A5FC877005726D4 /* VSFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59767E862A5FC877005726D4 /* VSFile.swift */; };
+		59767ED42A5FC877005726D4 /* VSLogZipRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59767E882A5FC877005726D4 /* VSLogZipRecord.swift */; };
+		59767ED52A5FC877005726D4 /* VSTempHumiRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59767E892A5FC877005726D4 /* VSTempHumiRecord.swift */; };
+		598D66EA2A5FD773006216DE /* VSCartBadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598D66E92A5FD773006216DE /* VSCartBadgeView.swift */; };
+		598D66ED2A5FD8B0006216DE /* QSWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598D66EC2A5FD8B0006216DE /* QSWebViewController.swift */; };
 		59FC904627D73E5E0088C49A /* QSButtonDemoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FC904527D73E5E0088C49A /* QSButtonDemoController.swift */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
-		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		ADF96AEF27A3A7B64309C1B7 /* Pods_QSKitLibrary_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2C9EB0E725DD4664F7128CB /* Pods_QSKitLibrary_Example.framework */; };
-		D0C2C730CABF923541AFA267 /* Pods_QSKitLibrary_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 112BEE9F6FE0F98EBE63431C /* Pods_QSKitLibrary_Tests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,22 +66,59 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		112BEE9F6FE0F98EBE63431C /* Pods_QSKitLibrary_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QSKitLibrary_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1237E5D8D4BD3DE48AAEB8DE /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		222B81697465EC77B2E0D046 /* Pods-QSKitLibrary_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QSKitLibrary_Example.release.xcconfig"; path = "Target Support Files/Pods-QSKitLibrary_Example/Pods-QSKitLibrary_Example.release.xcconfig"; sourceTree = "<group>"; };
 		39B278C96151D02EBF0A2E63 /* Pods-QSKitLibrary_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QSKitLibrary_Example.debug.xcconfig"; path = "Target Support Files/Pods-QSKitLibrary_Example/Pods-QSKitLibrary_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		59767E312A5FC876005726D4 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		59767E382A5FC876005726D4 /* XibInitial.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XibInitial.swift; sourceTree = "<group>"; };
+		59767E3A2A5FC876005726D4 /* VSCommon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VSCommon.swift; sourceTree = "<group>"; };
+		59767E3C2A5FC876005726D4 /* ShopMallController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopMallController.swift; sourceTree = "<group>"; };
+		59767E3D2A5FC876005726D4 /* GrowIndexController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GrowIndexController.swift; sourceTree = "<group>"; };
+		59767E3E2A5FC876005726D4 /* MineController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineController.swift; sourceTree = "<group>"; };
+		59767E412A5FC876005726D4 /* VSAppstoreReviewAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VSAppstoreReviewAlert.swift; sourceTree = "<group>"; };
+		59767E432A5FC876005726D4 /* VSClockSharpPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VSClockSharpPicker.swift; sourceTree = "<group>"; };
+		59767E452A5FC876005726D4 /* QSDoubleSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QSDoubleSlider.swift; sourceTree = "<group>"; };
+		59767E472A5FC876005726D4 /* VSCollectionViewAlignLeftFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VSCollectionViewAlignLeftFlowLayout.swift; sourceTree = "<group>"; };
+		59767E482A5FC876005726D4 /* VSWaterFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VSWaterFlowLayout.swift; sourceTree = "<group>"; };
+		59767E4B2A5FC876005726D4 /* VSHUDLottieContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VSHUDLottieContentView.swift; sourceTree = "<group>"; };
+		59767E4F2A5FC876005726D4 /* TabbarViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabbarViewModel.swift; sourceTree = "<group>"; };
+		59767E512A5FC876005726D4 /* QSTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QSTabBarController.swift; sourceTree = "<group>"; };
+		59767E532A5FC876005726D4 /* InitInfoRespModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitInfoRespModel.swift; sourceTree = "<group>"; };
+		59767E542A5FC876005726D4 /* GlobalConfigRespModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalConfigRespModel.swift; sourceTree = "<group>"; };
+		59767E562A5FC876005726D4 /* VSRoundedTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VSRoundedTabBar.swift; sourceTree = "<group>"; };
+		59767E572A5FC876005726D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		59767E5A2A5FC876005726D4 /* VSDateHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VSDateHandler.swift; sourceTree = "<group>"; };
+		59767E5B2A5FC876005726D4 /* VSGoodsShowHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VSGoodsShowHandler.swift; sourceTree = "<group>"; };
+		59767E762A5FC877005726D4 /* VSMobileInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VSMobileInfo.swift; sourceTree = "<group>"; };
+		59767E782A5FC877005726D4 /* VSUserInfoManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VSUserInfoManager.swift; sourceTree = "<group>"; };
+		59767E792A5FC877005726D4 /* MineLocaleRespModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineLocaleRespModel.swift; sourceTree = "<group>"; };
+		59767E7B2A5FC877005726D4 /* VSError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VSError.swift; sourceTree = "<group>"; };
+		59767E7C2A5FC877005726D4 /* QSApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QSApi.swift; sourceTree = "<group>"; };
+		59767E7D2A5FC877005726D4 /* VSNotificationName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VSNotificationName.swift; sourceTree = "<group>"; };
+		59767E7E2A5FC877005726D4 /* VSHeightUnit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VSHeightUnit.swift; sourceTree = "<group>"; };
+		59767E7F2A5FC877005726D4 /* VSDeviceModelType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VSDeviceModelType.swift; sourceTree = "<group>"; };
+		59767E802A5FC877005726D4 /* VSVolumeUnit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VSVolumeUnit.swift; sourceTree = "<group>"; };
+		59767E812A5FC877005726D4 /* VSWebDomain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VSWebDomain.swift; sourceTree = "<group>"; };
+		59767E822A5FC877005726D4 /* VSTemperatureUnit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VSTemperatureUnit.swift; sourceTree = "<group>"; };
+		59767E842A5FC877005726D4 /* VSRealm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VSRealm.swift; sourceTree = "<group>"; };
+		59767E852A5FC877005726D4 /* VSCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VSCache.swift; sourceTree = "<group>"; };
+		59767E862A5FC877005726D4 /* VSFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VSFile.swift; sourceTree = "<group>"; };
+		59767E882A5FC877005726D4 /* VSLogZipRecord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VSLogZipRecord.swift; sourceTree = "<group>"; };
+		59767E892A5FC877005726D4 /* VSTempHumiRecord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VSTempHumiRecord.swift; sourceTree = "<group>"; };
+		598D66E92A5FD773006216DE /* VSCartBadgeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VSCartBadgeView.swift; sourceTree = "<group>"; };
+		598D66EC2A5FD8B0006216DE /* QSWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QSWebViewController.swift; sourceTree = "<group>"; };
 		59FC904527D73E5E0088C49A /* QSButtonDemoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QSButtonDemoController.swift; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* QSKitLibrary_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QSKitLibrary_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		607FACD71AFB9204008FA782 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		607FACDA1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		607FACDC1AFB9204008FA782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* QSKitLibrary_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QSKitLibrary_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		7CA9508BE92B53FA62A571A9 /* QSKitLibrary.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = QSKitLibrary.podspec; path = ../QSKitLibrary.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93BFE2F05606E49206E9342E /* libPods-QSKitLibrary_Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-QSKitLibrary_Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1F620A5E6B7E0882AF25273 /* Pods-QSKitLibrary_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QSKitLibrary_Tests.debug.xcconfig"; path = "Target Support Files/Pods-QSKitLibrary_Tests/Pods-QSKitLibrary_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		AE7CDA524E2C04B96F33CFD2 /* Pods-QSKitLibrary_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QSKitLibrary_Tests.release.xcconfig"; path = "Target Support Files/Pods-QSKitLibrary_Tests/Pods-QSKitLibrary_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		DC09F7BEF0B95DCF77751830 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
@@ -64,13 +138,239 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D0C2C730CABF923541AFA267 /* Pods_QSKitLibrary_Tests.framework in Frameworks */,
+				06A92BFA04294D352F5FA4F2 /* libPods-QSKitLibrary_Tests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		59767E322A5FC876005726D4 /* UIConfig */ = {
+			isa = PBXGroup;
+			children = (
+				598D66EB2A5FD786006216DE /* Business */,
+				59767E372A5FC876005726D4 /* UIUtils */,
+				59767E3B2A5FC876005726D4 /* RootModule */,
+				59767E3F2A5FC876005726D4 /* CommonWidgets */,
+			);
+			path = UIConfig;
+			sourceTree = "<group>";
+		};
+		59767E372A5FC876005726D4 /* UIUtils */ = {
+			isa = PBXGroup;
+			children = (
+				59767E382A5FC876005726D4 /* XibInitial.swift */,
+				59767E3A2A5FC876005726D4 /* VSCommon.swift */,
+			);
+			path = UIUtils;
+			sourceTree = "<group>";
+		};
+		59767E3B2A5FC876005726D4 /* RootModule */ = {
+			isa = PBXGroup;
+			children = (
+				59767E3C2A5FC876005726D4 /* ShopMallController.swift */,
+				59767E3D2A5FC876005726D4 /* GrowIndexController.swift */,
+				59767E3E2A5FC876005726D4 /* MineController.swift */,
+			);
+			path = RootModule;
+			sourceTree = "<group>";
+		};
+		59767E3F2A5FC876005726D4 /* CommonWidgets */ = {
+			isa = PBXGroup;
+			children = (
+				59767E402A5FC876005726D4 /* Alert */,
+				59767E422A5FC876005726D4 /* PickerView */,
+				59767E442A5FC876005726D4 /* Slider */,
+				59767E462A5FC876005726D4 /* UICollectionView */,
+				59767E492A5FC876005726D4 /* SegmentView */,
+				59767E4A2A5FC876005726D4 /* HUD */,
+			);
+			path = CommonWidgets;
+			sourceTree = "<group>";
+		};
+		59767E402A5FC876005726D4 /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				59767E412A5FC876005726D4 /* VSAppstoreReviewAlert.swift */,
+			);
+			path = Alert;
+			sourceTree = "<group>";
+		};
+		59767E422A5FC876005726D4 /* PickerView */ = {
+			isa = PBXGroup;
+			children = (
+				59767E432A5FC876005726D4 /* VSClockSharpPicker.swift */,
+			);
+			path = PickerView;
+			sourceTree = "<group>";
+		};
+		59767E442A5FC876005726D4 /* Slider */ = {
+			isa = PBXGroup;
+			children = (
+				59767E452A5FC876005726D4 /* QSDoubleSlider.swift */,
+			);
+			path = Slider;
+			sourceTree = "<group>";
+		};
+		59767E462A5FC876005726D4 /* UICollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				59767E472A5FC876005726D4 /* VSCollectionViewAlignLeftFlowLayout.swift */,
+				59767E482A5FC876005726D4 /* VSWaterFlowLayout.swift */,
+			);
+			path = UICollectionView;
+			sourceTree = "<group>";
+		};
+		59767E492A5FC876005726D4 /* SegmentView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SegmentView;
+			sourceTree = "<group>";
+		};
+		59767E4A2A5FC876005726D4 /* HUD */ = {
+			isa = PBXGroup;
+			children = (
+				59767E4B2A5FC876005726D4 /* VSHUDLottieContentView.swift */,
+			);
+			path = HUD;
+			sourceTree = "<group>";
+		};
+		59767E4D2A5FC876005726D4 /* UIModule */ = {
+			isa = PBXGroup;
+			children = (
+				59767E4E2A5FC876005726D4 /* ViewModel */,
+				59767E502A5FC876005726D4 /* Controller */,
+				59767E522A5FC876005726D4 /* Model */,
+				59767E552A5FC876005726D4 /* View */,
+			);
+			path = UIModule;
+			sourceTree = "<group>";
+		};
+		59767E4E2A5FC876005726D4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				59767E4F2A5FC876005726D4 /* TabbarViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		59767E502A5FC876005726D4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				59767E512A5FC876005726D4 /* QSTabBarController.swift */,
+				598D66EC2A5FD8B0006216DE /* QSWebViewController.swift */,
+				59FC904527D73E5E0088C49A /* QSButtonDemoController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		59767E522A5FC876005726D4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				59767E532A5FC876005726D4 /* InitInfoRespModel.swift */,
+				59767E542A5FC876005726D4 /* GlobalConfigRespModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		59767E552A5FC876005726D4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				59767E562A5FC876005726D4 /* VSRoundedTabBar.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		59767E582A5FC876005726D4 /* UIBase */ = {
+			isa = PBXGroup;
+			children = (
+				59767E592A5FC876005726D4 /* Handler */,
+				59767E742A5FC877005726D4 /* Logic */,
+			);
+			path = UIBase;
+			sourceTree = "<group>";
+		};
+		59767E592A5FC876005726D4 /* Handler */ = {
+			isa = PBXGroup;
+			children = (
+				59767E5A2A5FC876005726D4 /* VSDateHandler.swift */,
+				59767E5B2A5FC876005726D4 /* VSGoodsShowHandler.swift */,
+			);
+			path = Handler;
+			sourceTree = "<group>";
+		};
+		59767E742A5FC877005726D4 /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+				59767E752A5FC877005726D4 /* Tools */,
+				59767E772A5FC877005726D4 /* UserInfoManger */,
+				59767E7A2A5FC877005726D4 /* Enums */,
+				59767E832A5FC877005726D4 /* Dao */,
+			);
+			path = Logic;
+			sourceTree = "<group>";
+		};
+		59767E752A5FC877005726D4 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				59767E762A5FC877005726D4 /* VSMobileInfo.swift */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		59767E772A5FC877005726D4 /* UserInfoManger */ = {
+			isa = PBXGroup;
+			children = (
+				59767E782A5FC877005726D4 /* VSUserInfoManager.swift */,
+				59767E792A5FC877005726D4 /* MineLocaleRespModel.swift */,
+			);
+			path = UserInfoManger;
+			sourceTree = "<group>";
+		};
+		59767E7A2A5FC877005726D4 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				59767E7B2A5FC877005726D4 /* VSError.swift */,
+				59767E7C2A5FC877005726D4 /* QSApi.swift */,
+				59767E7D2A5FC877005726D4 /* VSNotificationName.swift */,
+				59767E7E2A5FC877005726D4 /* VSHeightUnit.swift */,
+				59767E7F2A5FC877005726D4 /* VSDeviceModelType.swift */,
+				59767E802A5FC877005726D4 /* VSVolumeUnit.swift */,
+				59767E812A5FC877005726D4 /* VSWebDomain.swift */,
+				59767E822A5FC877005726D4 /* VSTemperatureUnit.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		59767E832A5FC877005726D4 /* Dao */ = {
+			isa = PBXGroup;
+			children = (
+				59767E842A5FC877005726D4 /* VSRealm.swift */,
+				59767E852A5FC877005726D4 /* VSCache.swift */,
+				59767E862A5FC877005726D4 /* VSFile.swift */,
+				59767E872A5FC877005726D4 /* Realm */,
+			);
+			path = Dao;
+			sourceTree = "<group>";
+		};
+		59767E872A5FC877005726D4 /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				59767E882A5FC877005726D4 /* VSLogZipRecord.swift */,
+				59767E892A5FC877005726D4 /* VSTempHumiRecord.swift */,
+			);
+			path = Realm;
+			sourceTree = "<group>";
+		};
+		598D66EB2A5FD786006216DE /* Business */ = {
+			isa = PBXGroup;
+			children = (
+				598D66E92A5FD773006216DE /* VSCartBadgeView.swift */,
+			);
+			path = Business;
+			sourceTree = "<group>";
+		};
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
@@ -96,12 +396,15 @@
 			isa = PBXGroup;
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
-				607FACD71AFB9204008FA782 /* ViewController.swift */,
-				59FC904527D73E5E0088C49A /* QSButtonDemoController.swift */,
+				59767E312A5FC876005726D4 /* SceneDelegate.swift */,
+				59767E582A5FC876005726D4 /* UIBase */,
+				59767E322A5FC876005726D4 /* UIConfig */,
+				59767E4D2A5FC876005726D4 /* UIModule */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
-				607FACDC1AFB9204008FA782 /* Images.xcassets */,
+				59767E572A5FC876005726D4 /* Assets.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
+				607FACD71AFB9204008FA782 /* ViewController.swift */,
 			);
 			name = "Example for QSKitLibrary";
 			path = QSKitLibrary;
@@ -157,7 +460,7 @@
 			isa = PBXGroup;
 			children = (
 				F2C9EB0E725DD4664F7128CB /* Pods_QSKitLibrary_Example.framework */,
-				112BEE9F6FE0F98EBE63431C /* Pods_QSKitLibrary_Tests.framework */,
+				93BFE2F05606E49206E9342E /* libPods-QSKitLibrary_Tests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -216,10 +519,12 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 6AQUSNP777;
 						LastSwiftMigration = 0900;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 6AQUSNP777;
 						LastSwiftMigration = 0900;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
@@ -251,8 +556,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
+				59767EB32A5FC877005726D4 /* Assets.xcassets in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
-				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,11 +600,43 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-QSKitLibrary_Example/Pods-QSKitLibrary_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
 				"${BUILT_PRODUCTS_DIR}/QSKitLibrary/QSKitLibrary.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImageWebPCoder/SDWebImageWebPCoder.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKitExtend/SnapKitExtend.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftEntryKit/SwiftEntryKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftKeychainWrapper/SwiftKeychainWrapper.framework",
+				"${BUILT_PRODUCTS_DIR}/ZLPhotoBrowser/ZLPhotoBrowser.framework",
+				"${BUILT_PRODUCTS_DIR}/Zip/Zip.framework",
+				"${BUILT_PRODUCTS_DIR}/libwebp/libwebp.framework",
+				"${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/QSKitLibrary.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRelay.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImageWebPCoder.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKitExtend.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftEntryKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftKeychainWrapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ZLPhotoBrowser.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Zip.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/libwebp.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lottie.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -335,9 +672,46 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59767EB12A5FC877005726D4 /* GlobalConfigRespModel.swift in Sources */,
+				59767EA42A5FC877005726D4 /* ShopMallController.swift in Sources */,
+				59767EB02A5FC877005726D4 /* InitInfoRespModel.swift in Sources */,
+				59767EA92A5FC877005726D4 /* QSDoubleSlider.swift in Sources */,
+				59767ED02A5FC877005726D4 /* VSTemperatureUnit.swift in Sources */,
+				59767EAB2A5FC877005726D4 /* VSWaterFlowLayout.swift in Sources */,
+				59767EC82A5FC877005726D4 /* MineLocaleRespModel.swift in Sources */,
+				59767EA72A5FC877005726D4 /* VSAppstoreReviewAlert.swift in Sources */,
+				59767EA12A5FC877005726D4 /* XibInitial.swift in Sources */,
+				59767EC72A5FC877005726D4 /* VSUserInfoManager.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				59767EB52A5FC877005726D4 /* VSGoodsShowHandler.swift in Sources */,
+				59767ED52A5FC877005726D4 /* VSTempHumiRecord.swift in Sources */,
+				598D66ED2A5FD8B0006216DE /* QSWebViewController.swift in Sources */,
+				59767EB22A5FC877005726D4 /* VSRoundedTabBar.swift in Sources */,
+				59767ECC2A5FC877005726D4 /* VSHeightUnit.swift in Sources */,
+				59767ED12A5FC877005726D4 /* VSRealm.swift in Sources */,
+				59767ED42A5FC877005726D4 /* VSLogZipRecord.swift in Sources */,
+				59767EAC2A5FC877005726D4 /* VSHUDLottieContentView.swift in Sources */,
 				59FC904627D73E5E0088C49A /* QSButtonDemoController.swift in Sources */,
+				59767ED32A5FC877005726D4 /* VSFile.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				59767ED22A5FC877005726D4 /* VSCache.swift in Sources */,
+				59767EAA2A5FC877005726D4 /* VSCollectionViewAlignLeftFlowLayout.swift in Sources */,
+				59767EA52A5FC877005726D4 /* GrowIndexController.swift in Sources */,
+				59767EC62A5FC877005726D4 /* VSMobileInfo.swift in Sources */,
+				598D66EA2A5FD773006216DE /* VSCartBadgeView.swift in Sources */,
+				59767ECB2A5FC877005726D4 /* VSNotificationName.swift in Sources */,
+				59767E9D2A5FC877005726D4 /* SceneDelegate.swift in Sources */,
+				59767ECF2A5FC877005726D4 /* VSWebDomain.swift in Sources */,
+				59767EA62A5FC877005726D4 /* MineController.swift in Sources */,
+				59767EA32A5FC877005726D4 /* VSCommon.swift in Sources */,
+				59767EAE2A5FC877005726D4 /* TabbarViewModel.swift in Sources */,
+				59767EA82A5FC877005726D4 /* VSClockSharpPicker.swift in Sources */,
+				59767ECE2A5FC877005726D4 /* VSVolumeUnit.swift in Sources */,
+				59767ECA2A5FC877005726D4 /* QSApi.swift in Sources */,
+				59767ECD2A5FC877005726D4 /* VSDeviceModelType.swift in Sources */,
+				59767EAF2A5FC877005726D4 /* QSTabBarController.swift in Sources */,
+				59767EC92A5FC877005726D4 /* VSError.swift in Sources */,
+				59767EB42A5FC877005726D4 /* VSDateHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -483,7 +857,9 @@
 			baseConfigurationReference = 39B278C96151D02EBF0A2E63 /* Pods-QSKitLibrary_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 6AQUSNP777;
 				INFOPLIST_FILE = QSKitLibrary/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
@@ -498,7 +874,9 @@
 			baseConfigurationReference = 222B81697465EC77B2E0D046 /* Pods-QSKitLibrary_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 6AQUSNP777;
 				INFOPLIST_FILE = QSKitLibrary/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
@@ -512,6 +890,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A1F620A5E6B7E0882AF25273 /* Pods-QSKitLibrary_Tests.debug.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 6AQUSNP777;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -534,6 +913,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = AE7CDA524E2C04B96F33CFD2 /* Pods-QSKitLibrary_Tests.release.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 6AQUSNP777;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",

@@ -28,7 +28,7 @@ TODO: Add long description of the pod here.
   s.source           = { :git => 'https://github.com/quasi-library/ui-sdk-swift.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '9.0'
+  s.ios.deployment_target = '13.0'
   s.swift_versions = '5.0'
 
   s.source_files = 'QSKitLibrary/Classes/**/*'
@@ -38,6 +38,14 @@ TODO: Add long description of the pod here.
   # }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.frameworks = 'UIKit'
+  # 刷新组件
+  s.dependency 'MJRefresh', '~> 3.7.5'
+  # 方便UI控件使用函数式编程
+  s.dependency 'RxCocoa', '~> 6.5.0'
+  s.dependency 'RxSwift', '~> 6.5.0'
+  s.dependency 'SnapKit', '~> 5.6.0'
+  s.dependency 'SnapKitExtend', '~> 1.1.0'
+  # 一个牛逼的popup容器组件，可以用来展示toast和alert
+  s.dependency 'SwiftEntryKit', '~> 2.0.0'
 end
