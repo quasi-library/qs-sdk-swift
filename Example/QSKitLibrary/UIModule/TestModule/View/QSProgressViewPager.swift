@@ -87,9 +87,9 @@ class QSProgressViewPager: QSView {
         bubblesPageController.view.snp.makeConstraints { make in
             make.top.equalTo(progressBar.snp.bottom).offset(8)
             make.leading.equalToSuperview().offset(16)
-            make.trailing.equalToSuperview().offset(0)
+            make.trailing.equalToSuperview()
             make.height.equalTo(155)
-            make.bottom.equalToSuperview()
+            make.bottom.equalToSuperview().offset(-4)
         }
     }
 
@@ -112,12 +112,6 @@ class QSProgressViewPager: QSView {
             }
 
             self.mBubbleControllers = pages
-            self.bubblesPageController.setViewControllers(
-                pages,
-                direction: .forward,
-                animated: true,
-                completion: nil
-            )
         }
     }
 
@@ -221,9 +215,9 @@ extension QSProgressViewPager: UIPageViewControllerDataSource, UIPageViewControl
     }
 
     /// 返回页面数量(不实现则隐藏圆点，实现则展示圆点数量)
-    func presentationCount(for pageViewController: UIPageViewController) -> Int {
-        return mDataSource.count
-    }
+//    func presentationCount(for pageViewController: UIPageViewController) -> Int {
+//        return mBubbleControllers.count
+//    }
 
     /// 返回当前页面索引
     func presentationIndex(for pageViewController: UIPageViewController) -> Int {
