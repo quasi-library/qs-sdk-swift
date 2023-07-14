@@ -41,6 +41,7 @@
 		59767ED32A5FC877005726D4 /* VSFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59767E862A5FC877005726D4 /* VSFile.swift */; };
 		59767ED42A5FC877005726D4 /* VSLogZipRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59767E882A5FC877005726D4 /* VSLogZipRecord.swift */; };
 		59767ED52A5FC877005726D4 /* VSTempHumiRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59767E892A5FC877005726D4 /* VSTempHumiRecord.swift */; };
+		598523322A612FF00097A98D /* QSBubbleDialogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598523312A612FF00097A98D /* QSBubbleDialogView.swift */; };
 		598D66EA2A5FD773006216DE /* VSCartBadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598D66E92A5FD773006216DE /* VSCartBadgeView.swift */; };
 		598D66ED2A5FD8B0006216DE /* QSWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598D66EC2A5FD8B0006216DE /* QSWebViewController.swift */; };
 		598D66F12A5FDDBD006216DE /* DemoSimpleListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598D66F02A5FDDBD006216DE /* DemoSimpleListController.swift */; };
@@ -54,7 +55,6 @@
 		59A72F482A5FEFCD00A12A39 /* QSKitLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59A72F472A5FEFCD00A12A39 /* QSKitLibrary.framework */; };
 		59A72F4A2A5FF24E00A12A39 /* ExampleViewPagerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A72F492A5FF24E00A12A39 /* ExampleViewPagerController.swift */; };
 		59A72F4C2A5FF48100A12A39 /* QSViewPagerIndicatorItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A72F4B2A5FF48100A12A39 /* QSViewPagerIndicatorItem.swift */; };
-		59A72F4E2A60012F00A12A39 /* QSViewPagerBubbleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A72F4D2A60012F00A12A39 /* QSViewPagerBubbleController.swift */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
@@ -113,6 +113,7 @@
 		59767E862A5FC877005726D4 /* VSFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VSFile.swift; sourceTree = "<group>"; };
 		59767E882A5FC877005726D4 /* VSLogZipRecord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VSLogZipRecord.swift; sourceTree = "<group>"; };
 		59767E892A5FC877005726D4 /* VSTempHumiRecord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VSTempHumiRecord.swift; sourceTree = "<group>"; };
+		598523312A612FF00097A98D /* QSBubbleDialogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QSBubbleDialogView.swift; sourceTree = "<group>"; };
 		598D66E92A5FD773006216DE /* VSCartBadgeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VSCartBadgeView.swift; sourceTree = "<group>"; };
 		598D66EC2A5FD8B0006216DE /* QSWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QSWebViewController.swift; sourceTree = "<group>"; };
 		598D66F02A5FDDBD006216DE /* DemoSimpleListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoSimpleListController.swift; sourceTree = "<group>"; };
@@ -126,7 +127,6 @@
 		59A72F472A5FEFCD00A12A39 /* QSKitLibrary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = QSKitLibrary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		59A72F492A5FF24E00A12A39 /* ExampleViewPagerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleViewPagerController.swift; sourceTree = "<group>"; };
 		59A72F4B2A5FF48100A12A39 /* QSViewPagerIndicatorItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QSViewPagerIndicatorItem.swift; sourceTree = "<group>"; };
-		59A72F4D2A60012F00A12A39 /* QSViewPagerBubbleController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QSViewPagerBubbleController.swift; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* QSKitLibrary_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QSKitLibrary_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -413,7 +413,7 @@
 			children = (
 				59A72F452A5FEEA600A12A39 /* QSProgressViewPager.swift */,
 				59A72F4B2A5FF48100A12A39 /* QSViewPagerIndicatorItem.swift */,
-				59A72F4D2A60012F00A12A39 /* QSViewPagerBubbleController.swift */,
+				598523312A612FF00097A98D /* QSBubbleDialogView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -768,6 +768,7 @@
 				59767EAC2A5FC877005726D4 /* VSHUDLottieContentView.swift in Sources */,
 				598D66F12A5FDDBD006216DE /* DemoSimpleListController.swift in Sources */,
 				598D66F52A5FDE23006216DE /* DemoTestingListController.swift in Sources */,
+				598523322A612FF00097A98D /* QSBubbleDialogView.swift in Sources */,
 				59767ED32A5FC877005726D4 /* VSFile.swift in Sources */,
 				598D67002A5FE292006216DE /* DemoEntryItemCell.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
@@ -786,7 +787,6 @@
 				59767ECE2A5FC877005726D4 /* VSVolumeUnit.swift in Sources */,
 				598D67062A5FEC5B006216DE /* ExampleDoubleSliderController.swift in Sources */,
 				59A72F4A2A5FF24E00A12A39 /* ExampleViewPagerController.swift in Sources */,
-				59A72F4E2A60012F00A12A39 /* QSViewPagerBubbleController.swift in Sources */,
 				59767ECA2A5FC877005726D4 /* QSApi.swift in Sources */,
 				59767ECD2A5FC877005726D4 /* VSDeviceModelType.swift in Sources */,
 				59767EAF2A5FC877005726D4 /* QSTabBarController.swift in Sources */,

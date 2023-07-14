@@ -11,37 +11,42 @@ import QSKitLibrary
 
 class QSProgressViewPager: QSView {
     // MARK: - Property
-    /// 因为UIPageViewController需要添加在父级UIView Controller才工作
-    private weak var mViewController: UIViewController?
     /// 下方气泡展示视图
-    private var mBubbleControllers: [QSViewPagerBubbleController] = []
+    private var mBubbleViews: [QSBubbleDialogView] = []
 
-    var mDataSource: [String] = []
+    var mDataSource: [String] = [] {
+        didSet {
+            DispatchQueue.main.async {
+                self.reloadData()
+            }
+        }
+    }
 
     var currentIndex: Int = 0 {
         didSet {
-            self.updateSelectedStatus()
+            DispatchQueue.main.async {
+                self.updateSelectedStatus()
+            }
         }
     }
 
     // MARK: - Init / Public Method
     convenience init(
-        controller: UIViewController?,
         stageList: [String],
         currentStage: String?
     ) {
         self.init(frame: .zero)
 
-        self.mDataSource = stageList
-        self.mViewController = controller
-
-        self.createPageController()
         if let currentStage, let selectIndex = stageList.firstIndex(of: currentStage) {
             self.currentIndex = selectIndex
         } else {
             self.currentIndex = 0
         }
-        self.reloadData()
+
+        self.mDataSource = {
+            self.mDataSource = stageList
+            return stageList
+        }()
     }
 
     // MARK: - UI Layout Method
@@ -49,6 +54,7 @@ class QSProgressViewPager: QSView {
         super.addSubSnaps()
 
         self.addSubview(progressBar)
+        self.addSubview(bubblesScrollView)
     }
 
     override func layoutSnaps() {
@@ -60,64 +66,70 @@ class QSProgressViewPager: QSView {
             make.top.equalToSuperview()
             make.height.equalTo(30)
         }
-    }
 
-    /// 默认创建一页气泡
-    private func createPageController() {
-        guard let parentViewController = self.mViewController else {
-            return
-        }
-        // 创建初始的 BubbleViewController
-        let initialViewController = createBubbleViewController(index: 0)
-        self.mBubbleControllers = [initialViewController]
-
-        // 将初始视图控制器添加到 pageViewController
-        self.bubblesPageController.setViewControllers(
-            [initialViewController],
-            direction: .forward,
-            animated: true,
-            completion: nil
-        )
-        // 将 pageViewController 添加到视图层次结构中
-        parentViewController.addChild(self.bubblesPageController)
-        self.addSubview(bubblesPageController.view)
-        bubblesPageController.didMove(toParent: parentViewController)
-
-        // 布局
-        bubblesPageController.view.snp.makeConstraints { make in
+        bubblesScrollView.snp.makeConstraints { make in
             make.top.equalTo(progressBar.snp.bottom).offset(8)
             make.leading.equalToSuperview().offset(16)
             make.trailing.equalToSuperview()
-            make.height.equalTo(155)
+            make.height.equalTo(140)
             make.bottom.equalToSuperview().offset(-4)
         }
     }
 
     /// 创建指定索引的 BubbleViewController
-    private func createBubbleViewController(index: Int) -> QSViewPagerBubbleController {
-        // 创建和配置 BubbleViewController 实例
-        let bubbleViewController = QSViewPagerBubbleController()
+    private func createBubbleView(index: Int) -> QSBubbleDialogView {
+        let model = self.mDataSource[index]
+        let bubbleView = QSBubbleDialogView(model)
         // 设置相应的内容
         // ...
-        return bubbleViewController
+        return bubbleView
     }
 
     /// 刷新数据源，重载气泡视图数量
     private func reloadData() {
-        DispatchQueue.main.async {
-            var pages: [QSViewPagerBubbleController] = []
-            self.mDataSource.enumerated().forEach { index, _ in
-                let page = self.createBubbleViewController(index: index)
-                pages.append(page)
-            }
-
-            self.mBubbleControllers = pages
+        self.mBubbleViews.forEach { oldView in
+            oldView.removeFromSuperview()
         }
+
+        var newPages: [QSBubbleDialogView] = []
+        var lastBubbleView: QSBubbleDialogView?
+        self.mDataSource.enumerated().forEach { index, _ in
+            let bubbleView = self.createBubbleView(index: index)
+            newPages.append(bubbleView)
+
+            self.bubblesScrollView.addSubview(bubbleView)
+            bubbleView.snp.makeConstraints { make in
+                make.top.equalToSuperview()
+                make.bottom.lessThanOrEqualToSuperview()
+                if let lastBubbleView {
+                    make.leading.equalTo(lastBubbleView.snp.trailing).offset(15)
+                } else {
+                    make.leading.equalToSuperview()
+                }
+                make.width.equalTo(self.snp.width).offset(-16 - 8 - 16)
+                if index == self.mDataSource.count - 1 {
+                    make.trailing.equalToSuperview().offset(-16)
+                }
+            }
+            lastBubbleView = bubbleView
+        }
+
+        self.setNeedsLayout()
+        self.mBubbleViews = newPages
+        self.updateSelectedStatus()
     }
 
     /// 更新选中状态
     private func updateSelectedStatus() {
+        // 刷新进度条
         self.progressBar.reloadData()
+        self.layoutIfNeeded()
+
+        // 滑动到指定气泡
+        guard self.currentIndex < self.mBubbleViews.count else { return }
+        let showBubble = self.mBubbleViews[currentIndex]
+        let showRect = CGRect(x: showBubble.mj_x, y: showBubble.mj_y, width: showBubble.mj_w + 16, height: showBubble.mj_h)
+        self.bubblesScrollView.scrollRectToVisible(showRect, animated: true)
     }
 
     // MARK: - Lazy Method
@@ -139,9 +151,10 @@ class QSProgressViewPager: QSView {
     }()
 
     /// 下方的详情气泡
-    private lazy var bubblesPageController: UIPageViewController = {
-        let _pagerView = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
-        _pagerView.dataSource = self
+    private lazy var bubblesScrollView: UIScrollView = {
+        let _pagerView = UIScrollView()
+//        _pagerView.backgroundColor = .systemGray
+        _pagerView.showsHorizontalScrollIndicator = false
         _pagerView.delegate = self
         return _pagerView
     }()
@@ -193,37 +206,8 @@ extension QSProgressViewPager: UICollectionViewDataSource, UICollectionViewDeleg
         let itemHeight = 30.0
         return CGSize(width: itemWidth, height: itemHeight)
     }
-}
 
-extension QSProgressViewPager: UIPageViewControllerDataSource, UIPageViewControllerDelegate {
-    /// 返回前一个 BubbleViewController
-    func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
-        guard let currentIndex = mBubbleControllers.firstIndex(of: viewController as! QSViewPagerBubbleController),
-              currentIndex > 0 else {
-            return nil
-        }
-        return mBubbleControllers[currentIndex - 1]
-    }
-
-    /// 返回后一个 BubbleViewController
-    func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
-        guard let currentIndex = mBubbleControllers.firstIndex(of: viewController as! QSViewPagerBubbleController),
-              currentIndex < mBubbleControllers.count - 1 else {
-            return nil
-        }
-        return mBubbleControllers[currentIndex + 1]
-    }
-
-    /// 返回页面数量(不实现则隐藏圆点，实现则展示圆点数量)
-//    func presentationCount(for pageViewController: UIPageViewController) -> Int {
-//        return mBubbleControllers.count
-//    }
-
-    /// 返回当前页面索引
-    func presentationIndex(for pageViewController: UIPageViewController) -> Int {
-        guard let currentViewController = pageViewController.viewControllers?.first as? QSViewPagerBubbleController else {
-            return 0
-        }
-        return mBubbleControllers.firstIndex(of: currentViewController) ?? 0
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        self.currentIndex = indexPath.item
     }
 }

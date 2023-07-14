@@ -1,5 +1,5 @@
 //
-//  QSViewPagerBubbleController.swift
+//  QSBubbleDialogView.swift
 //  QSKitLibrary_Example
 //
 //  Created by Soul on 2023/7/13.
@@ -9,32 +9,21 @@
 import UIKit
 import QSKitLibrary
 
-class QSViewPagerBubbleController: UIViewController {
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-        self.view.backgroundColor = .appMainYellow
-        self.view.addSubview(bubbleFrameView)
-
-        bubbleFrameView.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
-        }
-    }
-
-    // MARK: - Lazy Method
-    private lazy var bubbleFrameView: QSBubbleDialogView = {
-        let _bubbleFrameView = QSBubbleDialogView()
-        _bubbleFrameView.backgroundColor = .orange
-        return _bubbleFrameView
-    }()
-}
-
 /// 气泡样式边框
 class QSBubbleDialogView: QSView {
     // MARK: - Property
     /// 气泡样式的边框
     private weak var mShapeLayer: CAShapeLayer?
+
+    public var mBubbleModel: String?
+
+    // MARK: - Init / Public Method
+    init(_ mBubbleModel: String) {
+        super.init(frame: .zero)
+
+        self.mBubbleModel = mBubbleModel
+        self.stageNameLabel.text = mBubbleModel
+    }
 
     // MARK: - UI Layout Method
     override func addSubSnaps() {
@@ -52,12 +41,13 @@ class QSBubbleDialogView: QSView {
 
         self.containerView.snp.makeConstraints { make in
             // 因为气泡包边预留1的宽度
-            make.edges.equalToSuperview().inset(UIEdgeInsets(top: 1, left: 1, bottom: 1, right: 9))
+            make.edges.equalToSuperview().inset(UIEdgeInsets(top: 1, left: 1, bottom: 1, right: 1))
         }
 
         stageNameLabel.snp.makeConstraints { make in
             make.top.equalToSuperview().offset(16)
             make.leading.equalToSuperview().offset(16)
+            make.height.equalTo(24)
         }
 
         stageDaysLabel.snp.makeConstraints { make in
@@ -67,9 +57,10 @@ class QSBubbleDialogView: QSView {
 
         stageDescLabel.snp.makeConstraints { make in
             make.top.equalTo(stageNameLabel.snp.bottom).offset(15)
-            make.bottom.equalToSuperview().offset(-15)
+            make.bottom.lessThanOrEqualToSuperview().offset(-15)
             make.leading.equalToSuperview().offset(16)
             make.trailing.equalToSuperview().offset(-16)
+//            make.height.equalTo(80)
         }
     }
 
@@ -140,7 +131,7 @@ class QSBubbleDialogView: QSView {
     // MARK: - Lazy Method
     private lazy var containerView: UIView = {
         let _containerView = UIView()
-        _containerView.backgroundColor = .appMainYellow
+//        _containerView.backgroundColor = .appMainYellow
 
         return _containerView
     }()
