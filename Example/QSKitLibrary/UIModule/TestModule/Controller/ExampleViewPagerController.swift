@@ -141,7 +141,6 @@ class ExampleViewPagerController: QSBaseViewController {
 
     // MARK: - UI Action Method
     @objc private func pushToChooseRecipe(_ sender: UIButton) {
-
     }
 
     @objc private func pushToNext(_ sender: UIButton) {
@@ -150,7 +149,6 @@ class ExampleViewPagerController: QSBaseViewController {
 
     // MARK: - Private Method
     private func checkBtnEnable() {
-
     }
 
     // MARK: - Lazy Method

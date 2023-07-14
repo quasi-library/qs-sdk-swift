@@ -10,7 +10,6 @@ import Foundation
 import QSKitLibrary
 
 class DemoComplexListController: QSBaseViewController {
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -27,5 +26,4 @@ class DemoComplexListController: QSBaseViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
 }

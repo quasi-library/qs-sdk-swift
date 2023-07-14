@@ -10,7 +10,6 @@ import UIKit
 import QSKitLibrary
 
 class QSViewPagerBubbleController: UIViewController {
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -104,17 +103,17 @@ class QSBubbleDialogView: QSView {
         bubblePath.addLine(to: topRightPoint)
         bubblePath.addQuadCurve(
             to: rightTopPoint,
-            controlPoint: CGPoint(x: topRightPoint.x + curveOffset , y: rightTopPoint.y - curveOffset)
+            controlPoint: CGPoint(x: topRightPoint.x + curveOffset, y: rightTopPoint.y - curveOffset)
         )
         bubblePath.addLine(to: rightBottomPoint)
         bubblePath.addQuadCurve(
             to: bottomRightPoint,
-            controlPoint: CGPoint(x: bottomRightPoint.x + curveOffset , y: rightBottomPoint.y + curveOffset)
+            controlPoint: CGPoint(x: bottomRightPoint.x + curveOffset, y: rightBottomPoint.y + curveOffset)
         )
         bubblePath.addLine(to: bottomLeftPoint)
         bubblePath.addQuadCurve(
             to: leftBottomPoint,
-            controlPoint: CGPoint(x: bottomLeftPoint.x - curveOffset , y: leftBottomPoint.y + curveOffset)
+            controlPoint: CGPoint(x: bottomLeftPoint.x - curveOffset, y: leftBottomPoint.y + curveOffset)
         )
         bubblePath.addLine(to: leftTopPoint)
         bubblePath.addQuadCurve(
@@ -186,4 +185,3 @@ class QSBubbleDialogView: QSView {
         return _label
     }()
 }
-

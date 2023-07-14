@@ -10,7 +10,6 @@ import UIKit
 import QSKitLibrary
 
 class ExampleDoubleSliderController: UIViewController {
-
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.

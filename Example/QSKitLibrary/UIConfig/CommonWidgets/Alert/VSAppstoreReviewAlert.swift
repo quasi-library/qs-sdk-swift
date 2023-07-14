@@ -13,7 +13,6 @@ import StoreKit
 enum VSAppstoreReviewAlert {
     /// 展示评分页面
     static func show(appstoreId: String = "12345678") {
-
 #if DEBUG
         let limitDays = 0.0
 #else

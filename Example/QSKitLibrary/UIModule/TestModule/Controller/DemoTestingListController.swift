@@ -10,7 +10,6 @@ import Foundation
 import QSKitLibrary
 
 class DemoTestingListController: QSBaseViewController {
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -50,5 +49,4 @@ class DemoTestingListController: QSBaseViewController {
         _button.addTarget(self, action: #selector(autoPush), for: .touchUpInside)
         return _button
     }()
-
 }

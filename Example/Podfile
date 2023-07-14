@@ -30,3 +30,21 @@ target 'QSKitLibrary_Tests' do
   inherit! :search_paths
 
 end
+
+#---hooks---
+$iOSVersion = '13.0'
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      # Pod Architectures For Simulators
+      # Needed for building for simulator on M1 Macs
+      config.build_settings['ONLY_ACTIVE_ARCH'] = 'NO'
+      # 避免pod中bundle target need sign
+      config.build_settings['CODE_SIGN_IDENTITY'] = ''
+      # Hook Pod target deployment version for xcode13
+      if Gem::Version.new($iOSVersion) > Gem::Version.new(config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'])
+        config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = $iOSVersion
+      end
+    end
+  end
+end

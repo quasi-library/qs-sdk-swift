@@ -132,7 +132,7 @@ public class QSViewPagerIndicatorItem: QSCollectionViewItem {
         )
         _nameLabel.setContentHuggingPriority(.defaultHigh, for: .horizontal)
         _nameLabel.setContentCompressionResistancePriority(.defaultHigh, for: .horizontal)
-        
+
         return _nameLabel
     }()
 }

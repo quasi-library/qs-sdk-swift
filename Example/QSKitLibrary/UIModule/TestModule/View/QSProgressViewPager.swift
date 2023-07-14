@@ -79,9 +79,9 @@ class QSProgressViewPager: QSView {
             completion: nil
         )
         // 将 pageViewController 添加到视图层次结构中
-        parentViewController.addChildViewController(self.bubblesPageController)
+        parentViewController.addChild(self.bubblesPageController)
         self.addSubview(bubblesPageController.view)
-        bubblesPageController.didMove(toParentViewController: parentViewController)
+        bubblesPageController.didMove(toParent: parentViewController)
 
         // 布局
         bubblesPageController.view.snp.makeConstraints { make in
@@ -103,10 +103,10 @@ class QSProgressViewPager: QSView {
     }
 
     /// 刷新数据源，重载气泡视图数量
-    private func reloadData(){
+    private func reloadData() {
         DispatchQueue.main.async {
             var pages: [QSViewPagerBubbleController] = []
-            self.mDataSource.enumerated().forEach { (index, model) in
+            self.mDataSource.enumerated().forEach { index, _ in
                 let page = self.createBubbleViewController(index: index)
                 pages.append(page)
             }
@@ -226,5 +226,4 @@ extension QSProgressViewPager: UIPageViewControllerDataSource, UIPageViewControl
         }
         return mBubbleControllers.firstIndex(of: currentViewController) ?? 0
     }
-
 }

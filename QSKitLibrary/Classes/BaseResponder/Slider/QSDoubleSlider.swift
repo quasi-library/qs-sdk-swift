@@ -155,7 +155,6 @@ open class QSDoubleSlider: UIView {
             make.top.bottom.trailing.equalTo(self.backLineView)
             make.width.equalTo(self.backLineView).multipliedBy(rightPrecent)
         }
-
     }
 
     // MARK: - UI Action Method

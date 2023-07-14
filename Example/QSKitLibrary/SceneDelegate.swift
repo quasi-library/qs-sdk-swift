@@ -8,7 +8,6 @@
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
-
     var window: UIWindow?
 
 
@@ -21,7 +20,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         // 创建自定义的UITabBarController
         let tabBarController = QSTabBarController()
-        
+
         // 设置根视图控制器为自定义的UITabBarController
         window = UIWindow(windowScene: windowScene)
         window?.rootViewController = tabBarController
@@ -55,7 +54,4 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to save data, release shared resources, and store enough scene-specific state information
         // to restore the scene back to its current state.
     }
-
-
 }
-
