@@ -11,6 +11,9 @@ import QSKitLibrary
 
 class QSProgressViewPager: QSView {
     // MARK: - Property
+    /// 气泡间隔
+    private let kBubbleSpace = 8.0
+
     /// 下方气泡展示视图
     private var mBubbleViews: [QSBubbleDialogView] = []
 
@@ -106,7 +109,7 @@ class QSProgressViewPager: QSView {
                 } else {
                     make.leading.equalToSuperview()
                 }
-                make.width.equalTo(self.snp.width).offset(-16 - 8 - 16)
+                make.width.equalTo(self.snp.width).offset(-16 - kBubbleSpace - 16)
                 if index == self.mDataSource.count - 1 {
                     make.trailing.equalToSuperview().offset(-16)
                 }
@@ -209,5 +212,17 @@ extension QSProgressViewPager: UICollectionViewDataSource, UICollectionViewDeleg
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         self.currentIndex = indexPath.item
+    }
+}
+
+extension QSProgressViewPager: UIScrollViewDelegate {
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        var eachBubbleWidth: CGFloat = kScreenWidth - 16 * 2 - kBubbleSpace
+        if let exsitBubble = mBubbleViews.first, exsitBubble.mj_w > 0 {
+            eachBubbleWidth = exsitBubble.mj_w + kBubbleSpace
+        }
+
+        let currentPage = floor((scrollView.contentOffset.x + eachBubbleWidth * 0.5) / eachBubbleWidth)
+        self.currentIndex = Int(currentPage)
     }
 }
