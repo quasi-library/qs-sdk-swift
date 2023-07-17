@@ -84,7 +84,7 @@ class QSProgressViewPager: QSView {
         let model = self.mDataSource[index]
         let bubbleView = QSBubbleDialogView(model)
         // 设置相应的内容
-        // ...
+        bubbleView.refreashVertexPostion(sumBubbleCount: self.mDataSource.count, thisBubbleIndex: index)
         return bubbleView
     }
 
@@ -131,7 +131,7 @@ class QSProgressViewPager: QSView {
         // 滑动到指定气泡
         guard self.currentIndex < self.mBubbleViews.count else { return }
         let showBubble = self.mBubbleViews[currentIndex]
-        let showRect = CGRect(x: showBubble.mj_x, y: showBubble.mj_y, width: showBubble.mj_w + 16, height: showBubble.mj_h)
+        let showRect = CGRect(x: showBubble.mj_x, y: showBubble.mj_y, width: showBubble.mj_w + kBubbleSpace + 16, height: showBubble.mj_h)
         self.bubblesScrollView.scrollRectToVisible(showRect, animated: true)
     }
 

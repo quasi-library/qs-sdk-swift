@@ -17,12 +17,32 @@ class QSBubbleDialogView: QSView {
 
     public var mBubbleModel: String?
 
-    // MARK: - Init / Public Method
-    init(_ mBubbleModel: String) {
-        super.init(frame: .zero)
+    private var mBubbleSum: Int = 1
+    private var mBubbleIndex: Int = 0
 
-        self.mBubbleModel = mBubbleModel
-        self.stageNameLabel.text = mBubbleModel
+    // MARK: - Init / Public Method
+    /// 构造方法
+    /// - Parameters proportion 当前气泡属于气泡数组中的位置，用于计算三角形顶点相对于气泡宽度的比例
+    init(_ bubbleModel: String) {
+        super.init(frame: CGRect(x: 0, y: 0, width: kScreenWidth - 40, height: kScreenWidth - 40))
+
+        self.mBubbleModel = bubbleModel
+        self.stageNameLabel.text = bubbleModel
+    }
+
+    /// 刷新三角顶点的相对位置(等宽偏移)
+    public func refreashVertexPostion(
+        sumBubbleCount: Int,
+        thisBubbleIndex: Int
+    ) {
+        guard sumBubbleCount > 1, thisBubbleIndex < sumBubbleCount else {
+            return
+        }
+
+        self.mBubbleSum = sumBubbleCount
+        self.mBubbleIndex = thisBubbleIndex
+        self.setNeedsLayout()
+        self.layoutIfNeeded()
     }
 
     // MARK: - UI Layout Method
@@ -73,6 +93,12 @@ class QSBubbleDialogView: QSView {
         let cornerRadius: CGFloat = 8
         let triangleHeight: CGFloat = 6         // 底是高的两倍
         var triangleCenterX = self.containerView.bounds.width / 2  // 默认中点
+        if self.mBubbleSum > 1 {
+            // 平分的宽度后计算中点相对位置
+            let w = self.containerView.bounds.width / CGFloat(self.mBubbleSum)
+            let currentWidth = CGFloat(self.mBubbleIndex) * w + w / 2
+            triangleCenterX = currentWidth
+        }
 
         let bubblePath = UIBezierPath()
 
