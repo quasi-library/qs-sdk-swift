@@ -10,22 +10,43 @@ import Foundation
 import QSKitLibrary
 
 class DemoTestingListController: QSBaseViewController {
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        autoPush()
+    }
+
+    override func addSubSnaps() {
+        super.addSubSnaps()
+
+        self.view.addSubview(button)
+    }
+
+    override func layoutSnaps() {
+        super.layoutSnaps()
+
+        self.button.snp.makeConstraints { make in
+            make.center.equalToSuperview()
+        }
     }
 
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    // MARK: - Test Method
+    @objc private func autoPush() {
+        pushToViewPager()
     }
-    */
 
+    private func pushToViewPager() {
+        let testVc = ExampleViewPagerController()
+        self.navigationController?.pushViewController(testVc, animated: true)
+    }
+
+    // MARK: - Lazy Method
+    private lazy var button: UIButton = {
+        let _button = QSButton(design: .outstand32Bold, title: "测试页面")
+        _button.setSolidBoardStyle()
+        _button.addTarget(self, action: #selector(autoPush), for: .touchUpInside)
+        return _button
+    }()
 }

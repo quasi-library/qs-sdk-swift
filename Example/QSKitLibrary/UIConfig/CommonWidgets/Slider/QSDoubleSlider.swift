@@ -227,7 +227,7 @@ open class QSDoubleSlider: UIView {
         // 记录传入的数值&更新展示标签
         if leftValue < limitMinValue || leftValue == -6666 {
             self.currentLeftValue = self.totalMinValue
-            self.bringSubview(toFront: self.rightThumbView)
+            self.bringSubviewToFront(self.rightThumbView)
         } else {
             self.currentLeftValue = leftValue
         }
@@ -235,7 +235,7 @@ open class QSDoubleSlider: UIView {
 
         if rightValue > limitMaxValue || rightValue == -6666 {
             self.currentRightValue = self.totalMaxValue
-            self.bringSubview(toFront: self.leftThumbView)
+            self.bringSubviewToFront(self.leftThumbView)
         } else {
             self.currentRightValue = rightValue
         }

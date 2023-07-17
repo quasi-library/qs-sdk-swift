@@ -153,11 +153,11 @@ public class QSWebViewController: UIViewController {
 
     private lazy var activityIndicatorView: UIActivityIndicatorView = {
         if #available(iOS 13.0, *) {
-            let activityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: .medium)
+            let activityIndicatorView = UIActivityIndicatorView(style: .medium)
             activityIndicatorView.color = tintColor ?? .label
             return activityIndicatorView
         } else {
-            let activityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: .gray)
+            let activityIndicatorView = UIActivityIndicatorView(style: .gray)
             activityIndicatorView.color = tintColor ?? .darkText
             return activityIndicatorView
         }

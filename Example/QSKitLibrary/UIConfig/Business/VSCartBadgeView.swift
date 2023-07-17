@@ -70,7 +70,6 @@ class VSCartBadgeView: UIControl {
 
     /// 点击后跳转
     @objc private func clickToPush() {
-
     }
 
     // MARK: - Lazy Method

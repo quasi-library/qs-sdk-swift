@@ -10,7 +10,6 @@ import Foundation
 import QSKitLibrary
 
 class DemoSimpleListController: QSBaseViewController {
-
     // MARK: - Property
 
     // MARK: - LifeCycle Method
@@ -83,12 +82,9 @@ class DemoSimpleListController: QSBaseViewController {
 
         return table
     }()
-
 }
 
 extension DemoSimpleListController: UITableViewDelegate, UITableViewDataSource {
-
-
     func tableView(_: UITableView, numberOfRowsInSection _: Int) -> Int {
         mViewModel.mDataSource.count
     }
@@ -119,4 +115,3 @@ extension DemoSimpleListController: UITableViewDelegate, UITableViewDataSource {
         }
     }
 }
-

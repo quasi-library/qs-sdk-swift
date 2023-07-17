@@ -24,10 +24,8 @@ class DemoSimpleListViewModel: QSBaseViewModel {
 //                return "未知"
             }
         }
-
     }
 
     // MARK: - Property
     var mDataSource: [Entry] = [.testButton, .testSliderDouble]
-
 }

@@ -59,62 +59,63 @@ class VSWaterfallFlowLayout: UICollectionViewFlowLayout {
   private var spacingWithLastSection: CGFloat = 0
 
     override func prepare() {
-    super.prepare()
-    self.contentHeight = 0
-    self.lastContentHeight = 0
-    self.spacingWithLastSection = 0
-    self.lineSpacing = 0
-    self.sectionInsets = .zero
-    self.headerSize = .zero
-    self.footerSize = .zero
-    self.columnHeights.removeAll()
-    self.attrsArray.removeAll()
+        super.prepare()
+
+        self.contentHeight = 0
+        self.lastContentHeight = 0
+        self.spacingWithLastSection = 0
+        self.lineSpacing = 0
+        self.sectionInsets = .zero
+        self.headerSize = .zero
+        self.footerSize = .zero
+        self.columnHeights.removeAll()
+        self.attrsArray.removeAll()
 
         let sectionCount = self.collectionView?.numberOfSections ?? 0
         guard let cv = self.collectionView else {
             return
         }
 
-    // 遍历section
-    for idx in 0..<sectionCount {
-      let indexPath = IndexPath(item: 0, section: idx)
-      if let columnCount = self.delegate?.columnNumber?(collectionView: cv, layout: self, section: indexPath.section) {
-        self.columnCount = columnCount
-      }
-      if let inset = self.delegate?.insetForSection?(collectionView: cv, layout: self, section: indexPath.section) {
-        self.sectionInsets = inset
-      }
-      if let spacingLastSection = self.delegate?.spacingWithLastSection?(collectionView: cv, layout: self, section: indexPath.section) {
-        self.spacingWithLastSection = spacingLastSection
-      }
-      // 生成header
-      let itemCount = cv.numberOfItems(inSection: idx)
-      let headerAttri = self.layoutAttributesForSupplementaryView(ofKind: UICollectionElementKindSectionHeader, at: indexPath)
-      if let header = headerAttri {
-        self.attrsArray.append(header)
-        self.columnHeights.removeAll()
-      }
-      self.lastContentHeight = self.contentHeight
-      // 初始化区 y值
-      for _ in 0..<self.columnCount {
-        self.columnHeights.append(self.contentHeight)
-      }
-      // 多少个item
-      for item in 0..<itemCount {
-        let indexPat = IndexPath(item: item, section: idx)
-        let attri = self.layoutAttributesForItem(at: indexPat)
-        if let attri = attri {
-          self.attrsArray.append(attri)
-        }
-      }
+        // 遍历section
+        for idx in 0..<sectionCount {
+            let indexPath = IndexPath(item: 0, section: idx)
+            if let columnCount = self.delegate?.columnNumber?(collectionView: cv, layout: self, section: indexPath.section) {
+                self.columnCount = columnCount
+            }
+            if let inset = self.delegate?.insetForSection?(collectionView: cv, layout: self, section: indexPath.section) {
+                self.sectionInsets = inset
+            }
+            if let spacingLastSection = self.delegate?.spacingWithLastSection?(collectionView: cv, layout: self, section: indexPath.section) {
+                self.spacingWithLastSection = spacingLastSection
+            }
+            // 生成header
+            let itemCount = cv.numberOfItems(inSection: idx)
+            let headerAttri = self.layoutAttributesForSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, at: indexPath)
+            if let header = headerAttri {
+                self.attrsArray.append(header)
+                self.columnHeights.removeAll()
+            }
+            self.lastContentHeight = self.contentHeight
+            // 初始化区 y值
+            for _ in 0..<self.columnCount {
+                self.columnHeights.append(self.contentHeight)
+            }
+            // 多少个item
+            for item in 0..<itemCount {
+                let indexPat = IndexPath(item: item, section: idx)
+                let attri = self.layoutAttributesForItem(at: indexPat)
+                if let attri = attri {
+                    self.attrsArray.append(attri)
+                }
+            }
 
-      // 初始化footer
-        let footerAttri = self.layoutAttributesForSupplementaryView(ofKind: UICollectionElementKindSectionFooter, at: indexPath)
-      if let footer = footerAttri {
-        self.attrsArray.append(footer)
-      }
+            // 初始化footer
+            let footerAttri = self.layoutAttributesForSupplementaryView(ofKind: UICollectionView.elementKindSectionFooter, at: indexPath)
+            if let footer = footerAttri {
+                self.attrsArray.append(footer)
+            }
+        }
     }
-  }
 
   override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
     return self.attrsArray
@@ -185,7 +186,7 @@ class VSWaterfallFlowLayout: UICollectionViewFlowLayout {
             return attri
         }
 
-        if elementKind == UICollectionElementKindSectionHeader {
+        if elementKind == UICollectionView.elementKindSectionHeader {
             if let headerSize = self.delegate?.referenceSizeForHeader?(collectionView: cv, layout: self, section: indexPath.section) {
                 self.headerSize = headerSize
             }
@@ -193,7 +194,7 @@ class VSWaterfallFlowLayout: UICollectionViewFlowLayout {
             attri.frame = CGRect(x: 0, y: self.contentHeight, width: self.headerSize.width, height: self.headerSize.height)
             self.contentHeight += self.headerSize.height
             self.contentHeight += self.sectionInsets.top
-        } else if elementKind == UICollectionElementKindSectionFooter {
+        } else if elementKind == UICollectionView.elementKindSectionFooter {
             if let footerSize = self.delegate?.referenceSizeForFooter?(collectionView: cv, layout: self, section: indexPath.section) {
                 self.footerSize = footerSize
             }

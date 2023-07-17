@@ -53,7 +53,7 @@ class QSTabBarController: UITabBarController {
 
         self.meNav = meNav
         // 将页面添加到 tabBarController
-        self.viewControllers = [growNav, meNav, testingNav]
+        self.viewControllers = [testingNav, growNav, meNav]
 
         // 自定义标签栏的外观
         if #available(iOS 13.0, *) {
@@ -72,10 +72,6 @@ class QSTabBarController: UITabBarController {
                 tabBar.scrollEdgeAppearance = appearance
             }
         }
-
-        #if DEBUG
-        self.selectedIndex = 2
-        #endif
     }
 
     // MARK: - Bind Method
